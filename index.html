@@ -334,76 +334,285 @@
 
         <div class="video-section">
             <div class="video-container">
-                <div class="fake-video-player" id="suspectVideo">
-                    <div class="video-frame" id="videoFrame">🎭</div>
-                    <div class="video-text">嫌疑人正在表演...</div>
+                <div class="realistic-video-player" id="videoPlayer">
+                    <!-- 视频画面区域 -->
+                    <div class="video-screen" id="videoScreen">
+                        <div class="video-content" id="videoContent">
+                            <div class="loading-spinner"></div>
+                            <div class="loading-text">正在加载罪证视频...</div>
+                        </div>
+                        <div class="video-overlay">
+                            <div class="video-title">崔中阳作案实录.mp4</div>
+                            <div class="video-status">▶️ 准备播放</div>
+                        </div>
+                    </div>
+                    
+                    <!-- 视频控制栏 -->
+                    <div class="video-controls">
+                        <button class="control-btn play-pause-btn" id="playPauseBtn" onclick="toggleVideo()">
+                            <span id="playIcon">▶️</span>
+                        </button>
+                        
+                        <div class="progress-container">
+                            <div class="progress-bar" id="progressBar">
+                                <div class="progress-fill" id="progressFill"></div>
+                            </div>
+                            <div class="time-display">
+                                <span id="currentTime">00:00</span> / <span id="totalTime">00:15</span>
+                            </div>
+                        </div>
+                        
+                        <button class="control-btn volume-btn" onclick="toggleMute()">
+                            <span id="volumeIcon">🔊</span>
+                        </button>
+                        
+                        <button class="control-btn fullscreen-btn" onclick="toggleFullscreen()">
+                            <span>⛶</span>
+                        </button>
+                    </div>
                 </div>
-                <div class="play-button" onclick="startFakeVideo()">▶️ 播放罪证视频</div>
             </div>
-            <div class="video-label">📹 点击播放嫌疑人作案实录（模拟动画）</div>
+            <div class="video-label">📹 崔中阳作案实录（高清重置版）</div>
         </div>
 
         <style>
-            .fake-video-player {
+            .realistic-video-player {
+                width: 100%;
+                background: #000;
+                border-radius: 8px;
+                overflow: hidden;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+            }
+            
+            .video-screen {
                 width: 100%;
                 height: 300px;
-                background: #000;
+                background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+                position: relative;
                 display: flex;
-                flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                position: relative;
             }
             
-            .video-frame {
-                font-size: 80px;
-                animation: videoAnimation 2s infinite;
-            }
-            
-            .video-text {
+            .video-content {
+                text-align: center;
                 color: #fff;
-                margin-top: 20px;
-                font-size: 18px;
             }
             
-            @keyframes videoAnimation {
-                0% { transform: scale(1) rotate(0deg); }
-                25% { transform: scale(1.2) rotate(90deg); }
-                50% { transform: scale(1) rotate(180deg); }
-                75% { transform: scale(1.2) rotate(270deg); }
-                100% { transform: scale(1) rotate(360deg); }
+            .loading-spinner {
+                width: 60px;
+                height: 60px;
+                border: 4px solid rgba(255, 255, 255, 0.3);
+                border-top: 4px solid #ff0000;
+                border-radius: 50%;
+                animation: spin 1s linear infinite;
+                margin: 0 auto 20px;
+            }
+            
+            @keyframes spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+            }
+            
+            .loading-text {
+                font-size: 16px;
+                color: #ccc;
+            }
+            
+            .video-overlay {
+                position: absolute;
+                top: 20px;
+                left: 20px;
+                right: 20px;
+                color: #fff;
+                text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+            }
+            
+            .video-title {
+                font-size: 18px;
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+            
+            .video-status {
+                font-size: 14px;
+                color: #ffeb3b;
+            }
+            
+            .video-controls {
+                display: flex;
+                align-items: center;
+                padding: 10px 15px;
+                background: rgba(0, 0, 0, 0.9);
+                color: #fff;
+            }
+            
+            .control-btn {
+                background: none;
+                border: none;
+                color: #fff;
+                cursor: pointer;
+                padding: 8px;
+                font-size: 18px;
+                margin-right: 10px;
+            }
+            
+            .control-btn:hover {
+                color: #ffeb3b;
+            }
+            
+            .progress-container {
+                flex: 1;
+                display: flex;
+                align-items: center;
+                margin-right: 15px;
+            }
+            
+            .progress-bar {
+                flex: 1;
+                height: 6px;
+                background: #333;
+                border-radius: 3px;
+                position: relative;
+                cursor: pointer;
+                margin-right: 10px;
+            }
+            
+            .progress-fill {
+                height: 100%;
+                background: #ff0000;
+                border-radius: 3px;
+                width: 0%;
+                transition: width 0.1s;
+            }
+            
+            .time-display {
+                font-size: 12px;
+                color: #ccc;
+                white-space: nowrap;
+            }
+            
+            /* 播放中的样式 */
+            .playing .video-content .loading-spinner {
+                display: none;
+            }
+            
+            .playing .video-content .loading-text {
+                font-size: 24px;
+                animation: pulse 1s infinite;
+            }
+            
+            @keyframes pulse {
+                0%, 100% { opacity: 1; transform: scale(1); }
+                50% { opacity: 0.7; transform: scale(1.05); }
+            }
+            
+            /* 播放完成的样式 */
+            .ended .video-status {
+                color: #4caf50;
             }
         </style>
 
         <script>
-            function startFakeVideo() {
-                const frame = document.getElementById('videoFrame');
-                const button = document.querySelector('.play-button');
-                
-                // 播放动画
-                const emojis = ['🎭', '🤡', '🎪', '😂', '🤪', '😈', '💀', '👻'];
-                let index = 0;
-                
-                const interval = setInterval(() => {
-                    frame.textContent = emojis[index % emojis.length];
-                    index++;
-                    if (index >= emojis.length * 3) { // 播放3轮
-                        clearInterval(interval);
-                        button.textContent = '⏹️ 播放完成';
-                        setTimeout(() => {
-                            button.textContent = '▶️ 重新播放';
-                        }, 2000);
-                    }
-                }, 300);
-                
-                button.textContent = '⏸️ 播放中...';
-                button.style.background = 'rgba(0, 100, 0, 0.8)';
-                
-                // 隐藏按钮
-                setTimeout(() => {
-                    button.style.display = 'none';
-                }, 500);
+            let videoState = 'ready'; // ready, playing, paused, ended
+            let currentTime = 0;
+            let duration = 15; // 模拟15秒的视频
+            let playInterval = null;
+            
+            function toggleVideo() {
+                if (videoState === 'ready' || videoState === 'paused') {
+                    playVideo();
+                } else if (videoState === 'playing') {
+                    pauseVideo();
+                } else if (videoState === 'ended') {
+                    restartVideo();
+                }
             }
+            
+            function playVideo() {
+                videoState = 'playing';
+                document.getElementById('videoPlayer').classList.add('playing');
+                document.getElementById('playIcon').textContent = '⏸️';
+                document.getElementById('videoStatus').textContent = '⏸️ 播放中 (00:15)';
+                document.querySelector('.loading-text').textContent = '🎭 正在播放罪证视频...';
+                
+                // 开始进度更新
+                playInterval = setInterval(() => {
+                    currentTime += 0.1;
+                    updateProgress();
+                    
+                    if (currentTime >= duration) {
+                        endVideo();
+                    }
+                }, 100);
+            }
+            
+            function pauseVideo() {
+                videoState = 'paused';
+                clearInterval(playInterval);
+                document.getElementById('playIcon').textContent = '▶️';
+                document.getElementById('videoStatus').textContent = '⏸️ 已暂停';
+                document.querySelector('.loading-text').textContent = '⏸️ 播放已暂停';
+            }
+            
+            function endVideo() {
+                videoState = 'ended';
+                clearInterval(playInterval);
+                currentTime = duration;
+                updateProgress();
+                
+                document.getElementById('videoPlayer').classList.remove('playing');
+                document.getElementById('videoPlayer').classList.add('ended');
+                document.getElementById('playIcon').textContent = '🔄';
+                document.getElementById('videoStatus').textContent = '✅ 播放完成';
+                document.querySelector('.loading-text').textContent = '✅ 罪证视频播放完毕';
+            }
+            
+            function restartVideo() {
+                currentTime = 0;
+                videoState = 'ready';
+                document.getElementById('videoPlayer').classList.remove('ended');
+                document.getElementById('playIcon').textContent = '▶️';
+                document.getElementById('videoStatus').textContent = '▶️ 准备播放';
+                document.querySelector('.loading-text').textContent = '正在加载罪证视频...';
+                updateProgress();
+            }
+            
+            function updateProgress() {
+                const progress = (currentTime / duration) * 100;
+                document.getElementById('progressFill').style.width = progress + '%';
+                
+                const minutes = Math.floor(currentTime / 60);
+                const seconds = Math.floor(currentTime % 60);
+                document.getElementById('currentTime').textContent = 
+                    `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            }
+            
+            function toggleMute() {
+                const volumeIcon = document.getElementById('volumeIcon');
+                if (volumeIcon.textContent === '🔊') {
+                    volumeIcon.textContent = '🔇';
+                } else {
+                    volumeIcon.textContent = '🔊';
+                }
+            }
+            
+            function toggleFullscreen() {
+                alert('全屏功能需要真实视频支持\n当前为模拟播放器');
+            }
+            
+            // 点击进度条跳转
+            document.getElementById('progressBar').addEventListener('click', (e) => {
+                if (videoState !== 'ended') {
+                    const rect = e.target.getBoundingClientRect();
+                    const clickX = e.clientX - rect.left;
+                    const width = rect.width;
+                    const newTime = (clickX / width) * duration;
+                    
+                    currentTime = Math.max(0, Math.min(duration, newTime));
+                    updateProgress();
+                }
+            });
         </script>
 
         <div class="info-section">
