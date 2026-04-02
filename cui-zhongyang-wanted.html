@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>紧急悬赏令 - 崔中阳</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Microsoft YaHei', 'SimHei', Arial, sans-serif;
+            background: #1a1a1a;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .wanted-poster {
+            background: #f4e4bc;
+            width: 100%;
+            max-width: 600px;
+            padding: 40px;
+            border: 8px solid #8b4513;
+            box-shadow: 0 0 30px rgba(0,0,0,0.8), inset 0 0 20px rgba(139,69,19,0.3);
+            position: relative;
+        }
+
+        .wanted-poster::before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            border: 2px solid #8b4513;
+            pointer-events: none;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #8b4513;
+            padding-bottom: 20px;
+        }
+
+        .wanted-title {
+            font-size: 48px;
+            font-weight: 900;
+            color: #8b0000;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            letter-spacing: 8px;
+            margin-bottom: 10px;
+            animation: pulse 2s infinite;
+        }
+
+        .subtitle {
+            font-size: 20px;
+            color: #8b4513;
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+
+        .video-section {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+            position: relative;
+        }
+
+        .video-container {
+            width: 100%;
+            max-width: 400px;
+            position: relative;
+            border: 4px solid #8b4513;
+            box-shadow: 0 0 20px rgba(139, 69, 19, 0.5);
+        }
+
+        .video-player {
+            width: 100%;
+            height: 300px;
+            background: #000;
+        }
+
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(139, 0, 0, 0.8);
+            color: #fff;
+            padding: 20px 40px;
+            border-radius: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            border: 2px solid #ffd700;
+        }
+
+        .play-button:hover {
+            background: rgba(139, 0, 0, 1);
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+
+        .video-label {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 14px;
+            color: #8b4513;
+            font-weight: bold;
+        }
+
+        .info-section {
+            background: rgba(139, 69, 19, 0.1);
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 4px solid #8b4513;
+        }
+
+        .info-item {
+            display: flex;
+            margin-bottom: 15px;
+            align-items: flex-start;
+        }
+
+        .info-label {
+            font-weight: 900;
+            color: #8b4513;
+            min-width: 100px;
+            font-size: 18px;
+        }
+
+        .info-value {
+            color: #333;
+            flex: 1;
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .crime-list {
+            background: #ffe6e6;
+            padding: 20px;
+            margin: 20px 0;
+            border: 2px solid #8b0000;
+            border-radius: 5px;
+        }
+
+        .crime-title {
+            font-size: 24px;
+            color: #8b0000;
+            font-weight: 900;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .crime-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            padding: 10px;
+            background: #fff;
+            border-radius: 5px;
+        }
+
+        .crime-icon {
+            font-size: 24px;
+            margin-right: 15px;
+        }
+
+        .crime-text {
+            font-size: 18px;
+            color: #333;
+            flex: 1;
+        }
+
+        .reward-section {
+            text-align: center;
+            margin: 30px 0;
+            padding: 30px;
+            background: linear-gradient(135deg, #8b0000 0%, #ff6b6b 100%);
+            border-radius: 10px;
+            border: 4px solid #ffd700;
+            box-shadow: 0 10px 30px rgba(139, 0, 0, 0.5);
+        }
+
+        .reward-label {
+            font-size: 28px;
+            color: #ffd700;
+            font-weight: 900;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .reward-amount {
+            font-size: 56px;
+            color: #ffd700;
+            font-weight: 900;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+            margin-bottom: 10px;
+        }
+
+        .reward-note {
+            font-size: 16px;
+            color: #f4e4bc;
+        }
+
+        .warning {
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: #fff3cd;
+            border: 3px solid #ffc107;
+            border-radius: 5px;
+        }
+
+        .warning-text {
+            font-size: 20px;
+            color: #856404;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .warning-sub {
+            font-size: 16px;
+            color: #856404;
+        }
+
+        .contact-section {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 3px solid #8b4513;
+        }
+
+        .contact-title {
+            font-size: 24px;
+            color: #8b4513;
+            font-weight: 900;
+            margin-bottom: 15px;
+        }
+
+        .contact-item {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            font-size: 14px;
+            color: #666;
+            font-style: italic;
+        }
+
+        .stamp {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 120px;
+            height: 120px;
+            border: 3px solid #8b0000;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: rotate(-15deg);
+            background: rgba(139, 0, 0, 0.1);
+        }
+
+        .stamp-text {
+            font-size: 20px;
+            color: #8b0000;
+            font-weight: 900;
+            text-align: center;
+            transform: rotate(-15deg);
+        }
+
+        @media (max-width: 600px) {
+            .wanted-poster {
+                padding: 20px;
+            }
+
+            .wanted-title {
+                font-size: 32px;
+                letter-spacing: 4px;
+            }
+
+            .reward-amount {
+                font-size: 40px;
+            }
+
+            .info-item {
+                flex-direction: column;
+            }
+
+            .info-label {
+                min-width: auto;
+                margin-bottom: 5px;
+            }
+        }
+
+        .blink {
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+    </style>
+</head>
+<body>
+    <div class="wanted-poster">
+        <div class="stamp">
+            <div class="stamp-text">极度<br>危险</div>
+        </div>
+
+        <div class="header">
+            <div class="wanted-title blink">悬赏通缉令</div>
+            <div class="subtitle">WANTED POSTER</div>
+        </div>
+
+        <div class="video-section">
+            <div class="video-container">
+                <video class="video-player" id="suspectVideo" controls>
+                    <source src="https://github.com/asidunmading-4/cui-zhongyang-wanted/raw/main/suspect-video.mp4" type="video/mp4">
+                    <p style="color: white; text-align: center; padding: 50px;">您的浏览器不支持视频播放。嫌疑人已逃跑！</p>
+                </video>
+                <div class="play-button" onclick="document.getElementById('suspectVideo').play()">▶️ 播放罪证视频</div>
+            </div>
+            <div class="video-label">📹 点击播放嫌疑人作案实录</div>
+        </div>
+
+        <div class="info-section">
+            <div class="info-item">
+                <div class="info-label">姓名：</div>
+                <div class="info-value">崔中阳（代号：阜阳笑魔）</div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">性别：</div>
+                <div class="info-value">男（但经常性别模糊）</div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">籍贯：</div>
+                <div class="info-value">安徽省阜阳市（笑气发源地）</div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">危险等级：</div>
+                <div class="info-value" style="color: #8b0000; font-weight: 900; font-size: 24px;">⭐⭐⭐⭐⭐ 宇宙级危险</div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">特征：</div>
+                <div class="info-value">身高体重不详，善于伪装，搞笑技能点满，所到之处无不鸡飞狗跳</div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">口头禅：</div>
+                <div class="info-value" style="color: #ff0000; font-style: italic;">"你看我整不整你就完了！"</div>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <div class="info-item">
+                <div class="info-label">姓名：</div>
+                <div class="info-value">崔中阳</div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">性别：</div>
+                <div class="info-value">男</div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">籍贯：</div>
+                <div class="info-value">安徽省阜阳市</div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">危险等级：</div>
+                <div class="info-value" style="color: #8b0000; font-weight: 900;">⭐⭐⭐⭐⭐ 极其危险</div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">特征：</div>
+                <div class="info-value">身高体重不详，善于伪装，搞笑技能点满</div>
+            </div>
+        </div>
+
+        <div class="crime-list">
+            <div class="crime-title">😈 罪行清单（部分实录）😈</div>
+            <div class="crime-item">
+                <div class="crime-icon">🎯</div>
+                <div class="crime-text"><strong>表情包恐怖主义：</strong>在严肃工作群连续发送36个沙雕熊猫头，导致项目群聊彻底失控，项目经理当场昏迷</div>
+            </div>
+            <div class="crime-item">
+                <div class="crime-icon">🤣</div>
+                <div class="crime-text"><strong>冷笑话生化武器：</strong>疫情期间，在小区业主群发"为什么病毒不玩英雄联盟？因为怕被隔离"，引发集体退群事件</div>
+            </div>
+            <div class="crime-item">
+                <div class="crime-icon">🎭</div>
+                <div class="crime-text"><strong>葬礼表演艺术家：</strong>在亲戚葬礼上突然表演"快乐崇拜"舞蹈，声称"让逝者走得开心点"，被家属追打三条街</div>
+            </div>
+            <div class="crime-item">
+                <div class="crime-icon">🎪</div>
+                <div class="crime-text"><strong>无差别恶搞袭击：</strong>在超市偷偷给所有方便面扎小孔，并贴上"惊喜盲盒"标签，造成8位顾客投诉</div>
+            </div>
+            <div class="crime-item">
+                <div class="crime-icon">🧠</div>
+                <div class="crime-text"><strong>脑洞放射性污染：</strong>提出"用鼻涕做胶水"的商业计划，获得3位投资人拉黑成就</div>
+            </div>
+            <div class="crime-item">
+                <div class="crime-icon">🎵</div>
+                <div class="crime-text"><strong>音乐精神污染：</strong>深夜在宿舍循环播放"鸡你太美"，音量开到最大，导致室友集体失眠并提交换寝申请</div>
+            </div>
+            <div class="crime-item">
+                <div class="crime-icon">🍜</div>
+                <div class="crime-text"><strong>食物恐怖主义：</strong>在宿舍煮螺蛳粉并宣称"这是生化武器实战演练"，整层楼同学被迫疏散</div>
+            </div>
+            <div class="crime-item">
+                <div class="crime-icon">💃</div>
+                <div class="crime-text"><strong>广场舞入侵：</strong>在男生宿舍楼道教跳广场舞，声称"推广老年文化"，宿管阿姨当场报警</div>
+            </div>
+            <div class="crime-item">
+                <div class="crime-icon">📱</div>
+                <div class="crime-text"><strong>社死现场直播：</strong>偷偷直播室友换衣服过程，标题"大型翻车现场"，收获5000+弹幕"哈哈哈哈"</div>
+            </div>
+            <div class="crime-item">
+                <div class="crime-icon">🎮</div>
+                <div class="crime-text"><strong>游戏诈骗大师：</strong>在王者荣耀里假装妹子骗装备，被揭穿后声称"在练习反诈骗技能"</div>
+            </div>
+        </div>
+
+        <div class="reward-section">
+            <div class="reward-label">🏆 悬赏奖金（实时更新）🏆</div>
+            <div class="reward-amount">¥ 0.00</div>
+            <div class="reward-note">（友情悬赏，但受害者们正在众筹增加赏金）</div>
+            <div class="reward-note" style="margin-top: 10px; font-size: 14px;">
+                <span id="donation-counter">目前已收到受害者捐款：¥0.00</span><br>
+                <button onclick="addDonation()" style="margin-top: 10px; padding: 5px 15px; background: #ffd700; border: none; border-radius: 5px; cursor: pointer;">💰 我也来捐款</button>
+            </div>
+        </div>
+
+        <div class="warning">
+            <div class="warning-text blink">⚠️ 一级警告 ⚠️</div>
+            <div class="warning-sub">
+                发现此人物请立即保持距离至少100米！<br>
+                建议穿戴防笑面具和耳塞<br>
+                随身携带速效救心丸（以防笑死）<br>
+                <strong style="color: #ff0000;">如已被污染，请立即就医并接种"严肃疫苗"</strong>
+            </div>
+        </div>
+
+        <div class="contact-section">
+            <div class="contact-title">📞 紧急举报热线（24小时值班）</div>
+            <div class="contact-item">微信：搜索"崔中阳"或扫描他朋友圈二维码</div>
+            <div class="contact-item">电话：拨打10086转"受害者专线"</div>
+            <div class="contact-item">QQ：群发消息@全体成员并附上搞笑截图</div>
+            <div class="contact-item">邮箱：cui-zhongyang-is-wanted@funny.com</div>
+            <div class="contact-item">地址：安徽省阜阳市搞笑罪案调查科</div>
+        </div>
+
+        <div class="footer">
+            <p>本悬赏令由"受害者联盟"联合发布</p>
+            <p>纯属娱乐，但伤害真实存在 😭</p>
+            <p style="margin-top: 10px; font-size: 12px;">制作时间：2026年4月2日 | 受害者人数：持续增加中</p>
+            <p style="margin-top: 5px; font-size: 11px; color: #999;">法律顾问：笑死不管赔律师事务</p>
+        </div>
+
+        <script>
+            // 视频播放控制
+            document.addEventListener('DOMContentLoaded', function() {
+                const video = document.getElementById('suspectVideo');
+                const playButton = document.querySelector('.play-button');
+                
+                // 自动隐藏播放按钮当视频开始播放
+                video.addEventListener('play', function() {
+                    playButton.style.display = 'none';
+                });
+                
+                // 视频暂停时显示播放按钮
+                video.addEventListener('pause', function() {
+                    playButton.style.display = 'block';
+                });
+                
+                // 捐款计数器
+                window.donationAmount = 0;
+                window.addDonation = function() {
+                    const amounts = [0.01, 0.1, 1, 5, 10, 50, 100, 666, 888, 1000];
+                    const randomAmount = amounts[Math.floor(Math.random() * amounts.length)];
+                    window.donationAmount += randomAmount;
+                    document.getElementById('donation-counter').textContent = 
+                        `目前已收到受害者捐款：¥${window.donationAmount.toFixed(2)}`;
+                    
+                    // 添加音效提示（使用视觉反馈代替声音）
+                    const button = event.target;
+                    button.style.background = '#ff0000';
+                    button.textContent = '💸 捐款成功！';
+                    setTimeout(() => {
+                        button.style.background = '#ffd700';
+                        button.textContent = '💰 我也来捐款';
+                    }, 1000);
+                };
+                
+                // 页面加载完成提示
+                console.log('%c【警告】您正在浏览搞笑通缉令', 'color: red; font-size: 20px; font-weight: bold;');
+                console.log('%c如感不适，请立即关闭页面并就医', 'color: orange; font-size: 16px;');
+            });
+            
+            // 添加音效播放功能（使用Web Audio API）
+            function playAlertSound() {
+                const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                const oscillator = audioContext.createOscillator();
+                const gainNode = audioContext.createGain();
+                
+                oscillator.connect(gainNode);
+                gainNode.connect(audioContext.destination);
+                
+                oscillator.frequency.value = 800;
+                oscillator.type = 'sine';
+                
+                gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+                gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.5);
+                
+                oscillator.start(audioContext.currentTime);
+                oscillator.stop(audioContext.currentTime + 0.5);
+            }
+            
+            // 每30秒播放一次警告音效（用户交互后才会播放）
+            // setInterval(playAlertSound, 30000);
+        </script>
+    </div>
+</body>
+</html>
