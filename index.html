@@ -334,14 +334,77 @@
 
         <div class="video-section">
             <div class="video-container">
-                <video class="video-player" id="suspectVideo" controls>
-                    <source src="https://github.com/asidunmading-4/cui-zhongyang-wanted/raw/main/suspect-video.mp4" type="video/mp4">
-                    <p style="color: white; text-align: center; padding: 50px;">您的浏览器不支持视频播放。嫌疑人已逃跑！</p>
-                </video>
-                <div class="play-button" onclick="document.getElementById('suspectVideo').play()">▶️ 播放罪证视频</div>
+                <div class="fake-video-player" id="suspectVideo">
+                    <div class="video-frame" id="videoFrame">🎭</div>
+                    <div class="video-text">嫌疑人正在表演...</div>
+                </div>
+                <div class="play-button" onclick="startFakeVideo()">▶️ 播放罪证视频</div>
             </div>
-            <div class="video-label">📹 点击播放嫌疑人作案实录</div>
+            <div class="video-label">📹 点击播放嫌疑人作案实录（模拟动画）</div>
         </div>
+
+        <style>
+            .fake-video-player {
+                width: 100%;
+                height: 300px;
+                background: #000;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+            }
+            
+            .video-frame {
+                font-size: 80px;
+                animation: videoAnimation 2s infinite;
+            }
+            
+            .video-text {
+                color: #fff;
+                margin-top: 20px;
+                font-size: 18px;
+            }
+            
+            @keyframes videoAnimation {
+                0% { transform: scale(1) rotate(0deg); }
+                25% { transform: scale(1.2) rotate(90deg); }
+                50% { transform: scale(1) rotate(180deg); }
+                75% { transform: scale(1.2) rotate(270deg); }
+                100% { transform: scale(1) rotate(360deg); }
+            }
+        </style>
+
+        <script>
+            function startFakeVideo() {
+                const frame = document.getElementById('videoFrame');
+                const button = document.querySelector('.play-button');
+                
+                // 播放动画
+                const emojis = ['🎭', '🤡', '🎪', '😂', '🤪', '😈', '💀', '👻'];
+                let index = 0;
+                
+                const interval = setInterval(() => {
+                    frame.textContent = emojis[index % emojis.length];
+                    index++;
+                    if (index >= emojis.length * 3) { // 播放3轮
+                        clearInterval(interval);
+                        button.textContent = '⏹️ 播放完成';
+                        setTimeout(() => {
+                            button.textContent = '▶️ 重新播放';
+                        }, 2000);
+                    }
+                }, 300);
+                
+                button.textContent = '⏸️ 播放中...';
+                button.style.background = 'rgba(0, 100, 0, 0.8)';
+                
+                // 隐藏按钮
+                setTimeout(() => {
+                    button.style.display = 'none';
+                }, 500);
+            }
+        </script>
 
         <div class="info-section">
             <div class="info-item">
