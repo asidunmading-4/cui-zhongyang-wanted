@@ -1,0 +1,224 @@
+[
+  {
+    "time": "2026-03-28 13:15:41",
+    "results": [
+      {
+        "platform": "小米官网",
+        "price": null,
+        "note": "旧版爬虫误匹配(2016)"
+      },
+      {
+        "platform": "京东",
+        "price": null,
+        "note": "未解析"
+      },
+      {
+        "platform": "苏宁易购",
+        "price": null,
+        "note": "旧版爬虫误匹配(2015)"
+      },
+      {
+        "platform": "天猫/淘宝",
+        "price": null,
+        "note": "旧版爬虫误匹配(2021)"
+      }
+    ],
+    "_error_note": "v1爬虫bug：正则将日期/ID等无关数字误当价格"
+  },
+  {
+    "time": "2026-04-02 07:40:00",
+    "results": [
+      {
+        "platform": "小米官网",
+        "price": 4999,
+        "note": "起售价"
+      }
+    ]
+  },
+  {
+    "time": "2026-04-04 10:10:00",
+    "results": [
+      {
+        "platform": "官方首发价",
+        "price": 5599,
+        "config": "16GB+512GB",
+        "date": "2025-09-25"
+      },
+      {
+        "platform": "京东活动价",
+        "price": 4493,
+        "config": "16GB+512GB",
+        "discount": "直降800 + 国补-500 + 首购-300",
+        "date": "2026-04-03"
+      },
+      {
+        "platform": "小米官网",
+        "price": 5599,
+        "config": "16GB+512GB",
+        "date": "2026-04-04"
+      },
+      {
+        "platform": "中关村在线",
+        "price": 5099,
+        "config": "16GB+512GB",
+        "discount": "国补后",
+        "date": "2026-04-03"
+      }
+    ]
+  },
+  {
+    "time": "2026-04-16 07:34:30",
+    "results": [
+      {
+        "platform": "小米官网",
+        "price": null,
+        "note": "旧版爬虫误匹配"
+      },
+      {
+        "platform": "京东",
+        "price": null,
+        "note": "未解析"
+      },
+      {
+        "platform": "苏宁易购",
+        "price": null,
+        "note": "旧版爬虫误匹配"
+      },
+      {
+        "platform": "天猫/淘宝",
+        "price": null,
+        "note": "旧版爬虫误匹配"
+      }
+    ],
+    "_error_note": "v1爬虫bug已修复"
+  },
+  {
+    "time": "2026-04-21 13:16:51",
+    "results": [
+      {
+        "platform": "小米官网",
+        "price": null,
+        "note": "旧版爬虫误匹配"
+      },
+      {
+        "platform": "京东",
+        "price": null,
+        "note": "未解析"
+      },
+      {
+        "platform": "苏宁易购",
+        "price": null,
+        "note": "旧版爬虫误匹配"
+      },
+      {
+        "platform": "天猫/淘宝",
+        "price": null,
+        "note": "旧版爬虫误匹配"
+      }
+    ],
+    "_error_note": "v1爬虫bug已修复"
+  },
+  {
+    "time": "2026-04-22 07:39:21",
+    "results": [
+      {
+        "platform": "小米官网",
+        "price": null,
+        "note": "旧版爬虫误匹配"
+      },
+      {
+        "platform": "京东",
+        "price": null,
+        "note": "未解析"
+      },
+      {
+        "platform": "苏宁易购",
+        "price": null,
+        "note": "旧版爬虫误匹配"
+      },
+      {
+        "platform": "天猫/淘宝",
+        "price": null,
+        "note": "旧版爬虫误匹配"
+      }
+    ],
+    "_error_note": "v1爬虫bug已修复（当天早间最后一次错误运行）"
+  },
+  {
+    "time": "2026-04-22 13:01:07",
+    "product": "小米17 Pro",
+    "config": "16GB+512GB",
+    "msrp": 5599,
+    "results": [
+      {
+        "platform": "ZOL参考价",
+        "price": 6999,
+        "source": "货币符号",
+        "note": "可能为Pro Max或其他版本"
+      },
+      {
+        "platform": "小米官网",
+        "price": 4999,
+        "source": "JSON-price",
+        "note": "活动价参考"
+      },
+      {
+        "platform": "京东",
+        "price": null,
+        "note": "反爬"
+      }
+    ],
+    "version": 2,
+    "data_quality": "good"
+  },
+  {
+    "time": "2026-04-23 15:03:54",
+    "product": "小米17 Pro",
+    "config": "16GB+512GB",
+    "msrp": 5599,
+    "results": [
+      {
+        "platform": "ZOL参考价",
+        "price": 6999.0,
+        "source": "货币符号"
+      },
+      {
+        "platform": "小米官网",
+        "price": 4999.0,
+        "source": "JSON-price"
+      },
+      {
+        "platform": "京东",
+        "price": null,
+        "note": "反爬"
+      }
+    ],
+    "version": 2,
+    "data_quality": "good"
+  },
+  {
+    "time": "2026-04-24 17:01:54",
+    "product": "小米17 Pro",
+    "config": "16GB+512GB",
+    "msrp": 5599,
+    "results": [
+      {
+        "platform": "ZOL参考价",
+        "price": 6999.0,
+        "source": "货币符号"
+      },
+      {
+        "platform": "小米官网",
+        "price": 4999.0,
+        "source": "JSON-price"
+      },
+      {
+        "platform": "京东",
+        "price": null,
+        "note": "反爬"
+      }
+    ],
+    "version": 2,
+    "data_quality": "good"
+  }
+]
