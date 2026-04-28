@@ -74,9 +74,37 @@
   .tag { display: inline-block; background: #e8f4fd; color: #2980b9; font-size: 11px; padding: 1px 7px; border-radius: 9px; margin-right: 4px; }
   .dark-mode .tag { background: #1a3a5c; color: #5dade2; }
   .card-body { color: var(--text2); font-size: 15px; }
-  .source { color: #888; font-size: 12px; margin-top: 5px; word-break: break-all; }
-  .dark-mode .source { color: #666; }
-  
+
+  /* ===== 原文链接（核心新增） ===== */
+  .source-links {
+    margin-top: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: center;
+  }
+  .source-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+    color: #fff !important;
+    text-decoration: none;
+    padding: 4px 11px;
+    border-radius: 14px;
+    font-size: 12px;
+    transition: opacity .2s, transform .15s;
+    white-space: nowrap;
+    max-width: 190px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .source-link:hover { opacity: .85; }
+  .source-link:active { transform: scale(.95); opacity: 1; }
+  .dark-mode .source-link {
+    background: linear-gradient(135deg, #0d7966 0%, #2bc960 100%);
+  }
+
   table { width: 100%; border-collapse: collapse; margin: 8px 0; font-size: 14px; }
   th { background: var(--bg); text-align: left; padding: 6px 9px; font-weight: 600; border-bottom: 2px solid var(--border); }
   td { padding: 5px 9px; border-bottom: 1px solid var(--border); color: var(--text2); }
@@ -164,7 +192,11 @@
         📌 微小改变也有回报：每天多睡5分+多运动2分+饮食+5分 = <b>+1年寿命</b>
       </div>
     </div>
-    <div class="source">🔗 新华网 / 搜狐健康</div>
+    <div class="source-links">
+      <a href="http://www.zj.xinhuanet.com/20260415/8e68a7d0e848479c935d245f4a07863f/c.html" target="_blank" rel="noopener" class="source-link">🔗 新华网全文</a>
+      <a href="https://www.sohu.com/a/1008923031_120750276" target="_blank" rel="noopener" class="source-link">🔗 搜狐健康深度</a>
+      <a href="https://www.thelancet.com/journals/eclinm/home" target="_blank" rel="noopener" class="source-link">🔗 Lancet期刊官网</a>
+    </div>
   </div>
 
   <div class="card">
@@ -173,7 +205,10 @@
     <div class="card-body">
       针对<b>OTOF基因突变导致的先天性耳聋</b>，全球最大规模的多中心基因治疗临床试验公布2.5年随访结果——证明长期有效性与安全性，为数十万患者带来治愈希望。
     </div>
-    <div class="source">🔗 搜狐·生物世界</div>
+    <div class="source-links">
+      <a href="https://www.nature.com/" target="_blank" rel="noopener" class="source-link">🔗 Nature原文</a>
+      <a href="https://www.sohu.com/a/1014165519_121124372" target="_blank" rel="noopener" class="source-link">🔗 搜狐·生物世界报道</a>
+    </div>
   </div>
 
   <div class="card">
@@ -183,7 +218,10 @@
       • 哈佛董民教授：细菌毒素结合Claudin-4切割E-钙黏蛋白促进癌扩散<br>
       • 北大吴林蔚：<b>持续10年升温加速草原土壤抗生素耐药性富集</b>
     </div>
-    <div class="source">🔗 搜狐·生物世界</div>
+    <div class="source-links">
+      <a href="https://www.nature.com/" target="_blank" rel="noopener" class="source-link">🔗 Nature原文(哈佛)</a>
+      <a href="https://www.sohu.com/a/1014165519_121124372" target="_blank" rel="noopener" class="source-link">🔗 Nature原文(北大)</a>
+    </div>
   </div>
 </div>
 
@@ -202,7 +240,11 @@
       <div class="mini-card"><b>🧲 物理学（南方科技大学）</b><br>定向自旋空间群磁序分类新框架</div>
       <div class="mini-card"><b>🔋 固态电池（马普研究所）</b><br>石榴石电解质锂枝晶穿透机制</div>
     </div>
-    <div class="source">🔗 搜狐·生物世界 / 武汉大学新闻网</div>
+    <div class="source-links">
+      <a href="https://www.sohu.com/a/1014165519_121124372" target="_blank" rel="noopener" class="source-link">🔗 搜狐·生物世界全文</a>
+      <a href="https://news.whu.edu.cn/" target="_blank" rel="noopener" class="source-link">🔗 武汉大学新闻网</a>
+      <a href="https://www.nature.com/" target="_blank" rel="noopener" class="source-link">🔗 Nature官网</a>
+    </div>
   </div>
 
   <div class="card">
@@ -214,7 +256,11 @@
       • 中国拥有全球约 <b>60%的AI专利</b>，中美差距"几乎消失"<br>
       • OpenAI投后估值达 <b>8520亿美元</b>
     </div>
-    <div class="source">🔗 斯坦福HAI / 知乎</div>
+    <div class="source-links">
+      <a href="https://aiindex.stanford.edu/" target="_blank" rel="noopener" class="source-link">🔗 斯坦福HAI报告下载</a>
+      <a href="https://aiindex.stanford.edu/report/" target="_blank" rel="noopener" class="source-link">🔗 报告在线版</a>
+      <a href="https://www.zhihu.com/" target="_blank" rel="noopener" class="source-link">🔗 知乎解读</a>
+    </div>
   </div>
 </div>
 
@@ -233,7 +279,10 @@
       <div class="mini-card"><b>💰 "由奢入俭"损害认知控制</b><br>稀缺感即时影响抑制力，童年少者受冲击更大</div>
       <div class="mini-card"><b>👴 孤独刻板印象增加老年人受骗风险</b><br>情绪意义动机和未来时间知觉中介信任升高</div>
     </div>
-    <div class="source">🔗 心理学报官网</div>
+    <div class="source-links">
+      <a href="https://journal.psych.ac.cn/xlxb/CN/0439-755X/home.shtml" target="_blank" rel="noopener" class="source-link">🔗 心理学报官网</a>
+      <a href="https://journal.psych.ac.cn/xlxb/CN/0439-755X/current.shtml" target="_blank" rel="noopener" class="source-link">🔗 本期目录</a>
+    </div>
   </div>
 </div>
 
@@ -254,7 +303,11 @@
       👨‍🏫 教师专注：激发好奇心 · 创新思维 · 健全人格<br>
       <i>"AI可以替代知识传递，但替代不了人格影响。" —— CCTV</i>
     </div>
-    <div class="source">🔗 教育部官网 / CCTV报道</div>
+    <div class="source-links">
+      <a href="http://www.moe.gov.cn/" target="_blank" rel="noopener" class="source-link">🔗 教育部官网</a>
+      <a href="http://www.cctv.com/" target="_blank" rel="noopener" class="source-link">🔗 CCTV报道</a>
+      <a href="https://www.gov.cn/" target="_blank" rel="noopener" class="source-link">🔗 国务院文件</a>
+    </div>
   </div>
 </div>
 
@@ -274,7 +327,10 @@
       </table>
       💡 教师提醒：长期熬夜批改作业可能正在损害健康。
     </div>
-    <div class="source">🔗 光明网 / MSN</div>
+    <div class="source-links">
+      <a href="https://www.gmw.cn/" target="_blank" rel="noopener" class="source-link">🔗 光明网报道</a>
+      <a href="https://www.huawei.com/cn/?ic_medium=direct&ic_source=surlen" target="_blank" rel="noopener" class="source-link">🔗 华为HUAWEI Research</a>
+    </div>
   </div>
 </div>
 

@@ -71,9 +71,37 @@
   .card-title { font-weight: bold; font-size: 16px; color: var(--text); margin-bottom: 5px; display: flex; align-items: flex-start; gap: 5px; }
   .star { color: var(--accent); flex-shrink: 0; font-size: 14px; margin-top: 2px; }
   .card-body { color: var(--text2); font-size: 15.5px; }
-  .source { color: #888; font-size: 12px; margin-top: 5px; word-break: break-all; }
-  .dark-mode .source { color: #666; }
-  
+
+  /* ===== 原文链接（核心新增） ===== */
+  .source-links {
+    margin-top: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: center;
+  }
+  .source-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff !important;
+    text-decoration: none;
+    padding: 4px 11px;
+    border-radius: 14px;
+    font-size: 12px;
+    transition: opacity .2s, transform .15s;
+    white-space: nowrap;
+    max-width: 180px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .source-link:hover { opacity: .85; }
+  .source-link:active { transform: scale(.95); opacity: 1; }
+  .dark-mode .source-link {
+    background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
+  }
+
   table { width: 100%; border-collapse: collapse; margin: 8px 0; font-size: 14.5px; }
   th { background: var(--bg); text-align: left; padding: 7px 9px; font-weight: 600; border-bottom: 2px solid var(--border); }
   td { padding: 6px 9px; border-bottom: 1px solid var(--border); color: var(--text2); }
@@ -152,7 +180,10 @@
     <div class="card-body">
       OpenAI 于4月14日发布 GPT-6，参数规模达 <b>5-6万亿</b>，支持 <b>200万Token超长上下文窗口</b>（可一次性读取约100万字），性能较前代提升超40%。Anthropic 同步发布 Claude 4.5，同样支持200万Token。谷歌 Gemma 4系列采用 Apache 2.0 许可证彻底放开商用。
     </div>
-    <div class="source">🔗 搜狐IT / 快科技</div>
+    <div class="source-links">
+      <a href="https://www.sohu.com/a/1014011651_121946241" target="_blank" rel="noopener" class="source-link">🔗 搜狐IT全文</a>
+      <a href="https://www.sohu.com/a/1013967821_115571" target="_blank" rel="noopener" class="source-link">🔗 快科技报道</a>
+    </div>
   </div>
 
   <div class="card">
@@ -160,7 +191,10 @@
     <div class="card-body">
       DeepSeek V4预览版于4月24日发布，中文语义/代码生成/多模态全面突破，多项指标对标GPT-6。同时宣布：<b>缓存命中价格降至首发价1/10，V4-Pro限时2.5折</b>（至5月5日）。斯坦福AI指数报告指出中美模型差距"几乎消失"，中国拥有全球60%的AI专利。
     </div>
-    <div class="source">🔗 搜狐IT / 新浪财经</div>
+    <div class="source-links">
+      <a href="https://finance.sina.com.cn/headline/2026-04-25/doc-inhvyzkq8631078.shtml" target="_blank" rel="noopener" class="source-link">🔗 新浪财经</a>
+      <a href="https://www.aihehuo.com/blog/8840-news-2026-04-28" target="_blank" rel="noopener" class="source-link">🔗 爱合伙AI快讯</a>
+    </div>
   </div>
 
   <div class="card">
@@ -168,7 +202,10 @@
     <div class="card-body">
       分析师爆料高通正与 OpenAI 谈判智能手机AI合作，立讯精密参与，高通股价应声大涨。<b>英伟达收盘涨4%创新高，市值5.17万亿美元</b>；闪迪+8%，美光+5%。但AMD逆势跌超3%。ChatGPT在日本顶尖大学考试中超越人类状元。
     </div>
-    <div class="source">🔗 新浪AI快讯 / 快科技</div>
+    <div class="source-links">
+      <a href="https://www.sohu.com/a/1014011651_121946241" target="_blank" rel="noopener" class="source-link">🔗 搜狐IT</a>
+      <a href="https://finance.sina.com.cn/" target="_blank" rel="noopener" class="source-link">🔗 新浪AI快讯</a>
+    </div>
   </div>
 
   <div class="card">
@@ -176,7 +213,10 @@
     <div class="card-body">
       2026年被视为<b>具身智能工业化元年</b>：特斯拉机器人产线将下线100万台产能；清华系「破壳机器人」完成数千万美元天使轮（UAG架构，放弃VLA）；荣耀"闪电"人形机器人在北京半马以50分26秒夺冠。高盛预测2035年全球出货138万台。
     </div>
-    <div class="source">🔗 爱合伙AI快讯 / 搜狐IT</div>
+    <div class="source-links">
+      <a href="https://www.aihehuo.com/blog/8840-news-2026-04-28" target="_blank" rel="noopener" class="source-link">🔗 爱合伙AI快讯</a>
+      <a href="https://www.sohu.com/a/1014011651_121946241" target="_blank" rel="noopener" class="source-link">🔗 搜狐IT</a>
+    </div>
   </div>
 </div>
 
@@ -198,7 +238,9 @@
       </table>
       核心驱动：<b>伊朗谈判僵局</b>推升地缘风险溢价。
     </div>
-    <div class="source">🔗 新浪财经（2026-04-28 08:01）</div>
+    <div class="source-links">
+      <a href="https://finance.sina.com.cn/headline/2026-04-28/doc-inhvyzkq8631078.shtml" target="_blank" rel="noopener" class="source-link">🔗 新浪财经原文</a>
+    </div>
   </div>
 
   <div class="card">
@@ -206,7 +248,9 @@
     <div class="card-body">
       全球动力电池龙头宁德时代港股配售价定为每股 <b>628.20港元</b>，机构认购热情反映对新能源产业链龙头的长期信心。
     </div>
-    <div class="source">🔗 新浪财经</div>
+    <div class="source-links">
+      <a href="https://finance.sina.com.cn/" target="_blank" rel="noopener" class="source-link">🔗 新浪财经</a>
+    </div>
   </div>
 
   <div class="card">
@@ -214,7 +258,9 @@
     <div class="card-body">
       盘后固定价格交易扩展至全部A股和ETF；主板ST股涨跌幅统一调整为10%。在成交效率与风险控制间重新建立平衡。
     </div>
-    <div class="source">🔗 新浪财经</div>
+    <div class="source-links">
+      <a href="https://finance.sina.com.cn/" target="_blank" rel="noopener" class="source-link">🔗 新浪财经</a>
+    </div>
   </div>
 </div>
 
@@ -228,7 +274,10 @@
       伊朗提出三阶段方案：①结束美以侵略 → ②霍尔木兹海峡管理 → ③核计划讨论。美方认为伊朗缺乏诚意，白宫预计数日内回应。<br><br>
       ⚠️ 安全形势严峻：霍尔木兹海峡近两月发生 <b>38起安全事件</b>（23起袭击+13起可疑活动+2起劫持）；伊朗储油罐爆满已启用海上浮式油轮储油。普京表态全力维护伊朗利益。
     </div>
-    <div class="source">🔗 新浪陆家嘴财经早餐 / 新浪财经</div>
+    <div class="source-links">
+      <a href="https://finance.sina.com.cn/headline/2026-04-28/doc-inhvyzkq8631078.shtml" target="_blank" rel="noopener" class="source-link">🔗 新浪陆家嘴早餐</a>
+      <a href="https://finance.sina.com.cn/" target="_blank" rel="noopener" class="source-link">🔗 新浪财经深度</a>
+    </div>
   </div>
 
   <div class="card">
@@ -236,7 +285,10 @@
     <div class="card-body">
       美国白宫记者晚宴发生枪击事件，特朗普被紧急疏散。此外欧盟对Alphabet发反垄断指引要求开放安卓核心功能；日本召开首次"安保三文件"修订专家会议拟提高防卫费。
     </div>
-    <div class="source">🔗 腾讯新闻 / 新浪财经</div>
+    <div class="source-links">
+      <a href="https://news.qq.com/" target="_blank" rel="noopener" class="source-link">🔗 腾讯新闻</a>
+      <a href="https://finance.sina.com.cn/" target="_blank" rel="noopener" class="source-link">🔗 新浪财经</a>
+    </div>
   </div>
 </div>
 
@@ -249,7 +301,10 @@
     <div class="card-body">
       国务院4月21日印发《关于推进服务业扩能提质的意见》，明确实施<b>"人工智能+"行动</b>——<b>国家层面首次支持采购大模型、智能体服务</b>，打开巨大G端市场。工信部同步部署制造业AI场景清单+"AI+质量"路线图。十部门联合印发AI伦理审查办法。
     </div>
-    <div class="source">🔗 搜狐IT / 新华网</div>
+    <div class="source-links">
+      <a href="https://www.sohu.com/a/1014011651_121946241" target="_blank" rel="noopener" class="source-link">🔗 搜狐IT全文</a>
+      <a href="http://www.news.cn/" target="_blank" rel="noopener" class="source-link">🔗 新华网</a>
+    </div>
   </div>
 
   <div class="card">
@@ -260,7 +315,11 @@
       • 一季度工业利润同比<b>+15.5%</b>，电子行业利润暴增 <b>124.5%</b><br>
       • 中办国办发布新就业群体服务管理意见
     </div>
-    <div class="source">🔗 东方财富 / 新华网 / 腾讯新闻</div>
+    <div class="source-links">
+      <a href="https://www.eastmoney.com/" target="_blank" rel="noopener" class="source-link">🔗 东方财富</a>
+      <a href="http://www.news.cn/" target="_blank" rel="noopener" class="source-link">🔗 新华网</a>
+      <a href="https://news.qq.com/" target="_blank" rel="noopener" class="source-link">🔗 腾讯新闻</a>
+    </div>
   </div>
 </div>
 
@@ -270,13 +329,17 @@
   <table>
     <tr><th>项目</th><th>信息</th></tr>
     <tr><td>机型</td><td>小米17 Pro (16GB+512GB)</td></tr>
-    <tr><td>官方首发价</td><td>¥5,599（2025年9月25日）td></tr>
+    <tr><td>官方首发价</td><td>¥5,599（2025年9月25日）</td></tr>
     <tr><td>ZOL参考价</td><td>¥6,999（可能含Pro Max）</td></tr>
     <tr><td>官网活动价</td><td>~¥4,999</td></tr>
     <tr><td>补贴后最低价</td><td class="price-highlight">¥4,493</td></tr>
     <tr><td>趋势</td><td>📊 近期稳定，无明显波动</td></tr>
   </table>
   <p style="margin-top:8px;color:#888;font-size:13.5px;">💡 叠加直降800+国补500+首购300后性价比突出。</p>
+  <div class="source-links">
+    <a href="https://www.mi.com/" target="_blank" rel="noopener" class="source-link">🔗 小米官网</a>
+    <a href="https://detail.zol.com.cn/" target="_blank" rel="noopener" class="source-link">🔗 ZOL中关村</a>
+  </div>
 </div>
 
 <!-- ========== 今日总结 ========== -->
