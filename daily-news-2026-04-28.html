@@ -3,40 +3,145 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>每日要闻日报 | 2026年4月28日</title>
+<title>📰 每日要闻日报 | 2026年4月28日</title>
 <style>
+  /* ===== 基础 ===== */
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; background: #f5f5f5; color: #333; line-height: 1.7; font-size: 17px; padding: 12px; }
-  h1 { text-align: center; font-size: 22px; color: #1a1a1a; margin: 16px 0 6px; }
-  .meta { text-align: center; color: #888; font-size: 13px; margin-bottom: 20px; }
-  .section { background: #fff; border-radius: 10px; padding: 16px; margin-bottom: 14px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
-  .section-title { font-size: 19px; font-weight: bold; margin-bottom: 12px; color: #1a1a1a; border-left: 4px solid #e74c3c; padding-left: 10px; }
+  
+  :root {
+    --bg: #f5f5f5; --card-bg: #fff; --text: #333; --text2: #444;
+    --nav-bg: #1a1a2e; --nav-text: #fff; --accent: #e74c3c;
+    --border: #eee; --shadow: rgba(0,0,0,0.08);
+  }
+  
+  body.dark-mode {
+    --bg: #1a1a2e; --card-bg: #16213e; --text: #e0e0e0; --text2: #b0b0b0;
+    --nav-bg: #0f0f23; --border: #2a2a4a; --shadow: rgba(0,0,0,0.3);
+  }
+  
+  body {
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: var(--bg); color: var(--text);
+    line-height: 1.7; font-size: 17px;
+    padding: 56px 12px 20px; transition: background .3s, color .3s;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  /* ===== 固定导航栏 ===== */
+  .navbar {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 999;
+    background: var(--nav-bg); color: var(--nav-text);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 10px 14px; height: 50px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
+  .navbar-left, .navbar-right { display: flex; align-items: center; gap: 6px; }
+  .nav-btn {
+    display: inline-flex; align-items: center; gap: 4px;
+    background: rgba(255,255,255,0.15); border: none;
+    color: #fff; padding: 6px 12px; border-radius: 18px;
+    font-size: 13.5px; cursor: pointer; text-decoration: none;
+    user-select: none; transition: background .2s;
+  }
+  .nav-btn:hover, .nav-btn:active { background: rgba(255,255,255,0.28); }
+  .nav-btn:active { transform: scale(0.95); }
+  .nav-title { font-size: 15px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 160px; }
+  
+  /* ===== 内容区 ===== */
+  h1 { text-align: center; font-size: 21px; margin-bottom: 4px; }
+  .meta { text-align: center; color: #888; font-size: 12.5px; margin-bottom: 16px; }
+  .dark-mode .meta { color: #777; }
+  
+  .section {
+    background: var(--card-bg); border-radius: 10px; padding: 15px;
+    margin-bottom: 12px; box-shadow: 0 1px 3px var(--shadow);
+    transition: background .3s;
+  }
+  .section-title {
+    font-size: 17.5px; font-weight: bold; margin-bottom: 10px;
+    color: var(--text); border-left: 4px solid var(--accent); padding-left: 9px;
+  }
   .section-title.blue { border-color: #3498db; }
   .section-title.green { border-color: #27ae60; }
   .section-title.purple { border-color: #9b59b6; }
   .section-title.orange { border-color: #e67e22; }
-  .card { margin-bottom: 14px; padding-bottom: 14px; border-bottom: 1px solid #eee; }
-  .card:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
-  .card-title { font-weight: bold; font-size: 17px; color: #1a1a1a; margin-bottom: 6px; display: flex; align-items: flex-start; gap: 5px; }
-  .star { color: #e74c3c; flex-shrink: 0; font-size: 15px; margin-top: 2px; }
-  .card-body { color: #444; font-size: 16px; }
-  .source { color: #999; font-size: 13px; margin-top: 6px; word-break: break-all; }
-  table { width: 100%; border-collapse: collapse; margin: 8px 0; font-size: 15px; }
-  th { background: #f0f0f0; text-align: left; padding: 8px 10px; font-weight: 600; border-bottom: 2px solid #ddd; }
-  td { padding: 7px 10px; border-bottom: 1px solid #eee; }
-  .price-highlight { color: #e74c3c; font-weight: bold; font-size: 18px; }
-  .summary-box { background: #fffbe6; border: 1px solid #ffe58f; border-radius: 8px; padding: 14px; margin: 14px 0; }
-  .summary-box h3 { font-size: 17px; margin-bottom: 8px; color: #856404; }
-  .summary-box ul { padding-left: 20px; color: #555; }
-  .summary-box li { margin-bottom: 4px; font-size: 15px; }
-  .footer { text-align: center; color: #bbb; font-size: 12px; margin: 20px 0 10px; }
-  b { color: #1a1a1a; }
+  
+  .card { margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .card:last-child { border: none; margin: 0; padding: 0; }
+  .card-title { font-weight: bold; font-size: 16px; color: var(--text); margin-bottom: 5px; display: flex; align-items: flex-start; gap: 5px; }
+  .star { color: var(--accent); flex-shrink: 0; font-size: 14px; margin-top: 2px; }
+  .card-body { color: var(--text2); font-size: 15.5px; }
+  .source { color: #888; font-size: 12px; margin-top: 5px; word-break: break-all; }
+  .dark-mode .source { color: #666; }
+  
+  table { width: 100%; border-collapse: collapse; margin: 8px 0; font-size: 14.5px; }
+  th { background: var(--bg); text-align: left; padding: 7px 9px; font-weight: 600; border-bottom: 2px solid var(--border); }
+  td { padding: 6px 9px; border-bottom: 1px solid var(--border); color: var(--text2); }
+  .price-highlight { color: var(--accent); font-weight: bold; font-size: 17px; }
+  
+  .summary-box {
+    background: #fffbe6; border: 1px solid #ffe58f; border-radius: 8px;
+    padding: 13px; margin: 12px 0;
+  }
+  .dark-mode .summary-box { background: #332d00; border-color: #554d00; }
+  .summary-box h3 { font-size: 16px; margin-bottom: 7px; color: #856404; }
+  .dark-mode .summary-box h3 { color: #f0d060; }
+  .summary-box ul { padding-left: 18px; color: #555; }
+  .dark-mode .summary-box ul { color: #bbb; }
+  .summary-box li { margin-bottom: 3px; font-size: 14.5px; }
+  
+  .footer { text-align: center; color: #888; font-size: 11.5px; margin: 16px 0 8px; line-height: 1.6; }
+  b { color: var(--text); }
+  
+  /* ===== 回到顶部按钮 ===== */
+  .back-top {
+    position: fixed; right: 14px; bottom: 70px; z-index: 998;
+    width: 38px; height: 38px; border-radius: 50%;
+    background: var(--accent); color: #fff;
+    display: none; align-items: center; justify-content: center;
+    font-size: 18px; cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    border: none; user-select: none;
+    transition: transform .2s, opacity .2s;
+  }
+  .back-top.show { display: flex; opacity: 0.85; }
+  .back-top:active { transform: scale(0.9); opacity: 1; }
+  
+  /* ===== 底部快捷操作栏 ===== */
+  .bottom-bar {
+    position: fixed; bottom: 0; left: 0; right: 0; z-index: 997;
+    background: var(--card-bg); border-top: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: space-around;
+    padding: 8px 0; padding-bottom: max(8px, env(safe-area-inset-bottom));
+    box-shadow: 0 -1px 6px var(--shadow);
+  }
+  .bottom-bar button {
+    display: flex; flex-direction: column; align-items: center; gap: 2px;
+    background: none; border: none; color: var(--text2); font-size: 11px;
+    cursor: pointer; padding: 4px 12px; border-radius: 8px;
+    transition: background .2s, color .2s; user-select: none;
+  }
+  .bottom-bar button:active { background: var(--bg); }
+  .bottom-bar button .icon { font-size: 20px; }
+  .bottom-bar button.active { color: var(--accent); }
 </style>
 </head>
 <body>
 
+<!-- 导航栏 -->
+<div class="navbar">
+  <div class="navbar-left">
+    <a href="index.html" class="nav-btn">⬅ 首页</a>
+  </div>
+  <div class="nav-title">📰 每日要闻</div>
+  <div class="navbar-right">
+    <button class="nav-btn" onclick="location.reload()" id="refreshBtn">🔄</button>
+    <button class="nav-btn" onclick="toggleDark()" id="darkBtn">🌙</button>
+  </div>
+</div>
+
 <h1>📰 每日要闻日报</h1>
-<p class="meta">2026年4月28日（周二） | 覆盖 AI/科技 · 财经 · 国际 · 国内</p>
+<p class="meta">2026年4月28日（周二）| AI/科技 · 财经 · 国际 · 国内</p>
 
 <!-- ========== AI & 科技 ========== -->
 <div class="section">
@@ -165,27 +270,65 @@
   <table>
     <tr><th>项目</th><th>信息</th></tr>
     <tr><td>机型</td><td>小米17 Pro (16GB+512GB)</td></tr>
-    <tr><td>官方首发价</td><td>¥5,599（2025年9月25日）</td></tr>
+    <tr><td>官方首发价</td><td>¥5,599（2025年9月25日）td></tr>
     <tr><td>ZOL参考价</td><td>¥6,999（可能含Pro Max）</td></tr>
     <tr><td>官网活动价</td><td>~¥4,999</td></tr>
     <tr><td>补贴后最低价</td><td class="price-highlight">¥4,493</td></tr>
     <tr><td>趋势</td><td>📊 近期稳定，无明显波动</td></tr>
   </table>
-  <p style="margin-top:8px;color:#888;font-size:14px;">💡 叠加直降800+国补500+首购300后性价比突出。京东因反爬暂无数据。</p>
+  <p style="margin-top:8px;color:#888;font-size:13.5px;">💡 叠加直降800+国补500+首购300后性价比突出。</p>
 </div>
 
 <!-- ========== 今日总结 ========== -->
 <div class="summary-box">
   <h3>📊 本日最大看点</h3>
   <ul>
-    <li><b>AI密集爆发</b> — GPT-6 / DeepSeek-V4 / Claude 4.5集中发布，200万Token成新标配</li>
-    <li><b>地缘风险升级</b> — 伊朗僵局推金价(4710+)油价(逼近100)，霍尔木兹38起安全事件</li>
-    <li><b>国内政策利好</b> — 国务院首开政府采购大模型先河，AI迎G端红利</li>
-    <li><b>具身智能元年</b> — 特斯拉百万台产线 + 清华系获千万美元融资</li>
+    <li><b>AI密集爆发</b> — GPT-6 / DeepSeek-V4 / Claude 4.5集中发布</li>
+    <li><b>地缘风险升级</b> — 伊朗僵局推金价(4710+)油价(逼近100)</li>
+    <li><b>国内政策利好</b> — 国务院首开政府采购大模型先河</li>
+    <li><b>具身智能元年</b> — 特斯拉百万台产线 + 清华系融资</li>
   </ul>
 </div>
 
-<p class="footer">📡 数据来源：搜狐IT / 新浪财经 / 爱合伙 / 东方财富 / 腾讯新闻 / 快科技 / 新华网 等<br>🤖 由 WorkBuddy 自动采集整理 | 2026-04-28 13:05</p>
+<p class="footer">📡 数据来源：搜狐IT / 新浪财经 等<br>🤖 WorkBuddy 自动采集 | 2026-04-28 13:05</p>
+
+<!-- 回到顶部 -->
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<!-- 底部快捷栏 -->
+<div class="bottom-bar">
+  <button onclick="location.href='index.html'"><span class="icon">🏠</span>首页</button>
+  <button onclick="location.href='academic-daily-2026-04-28.html'"><span class="icon">📚</span>学术</button>
+  <button onclick="location.reload()"><span class="icon">🔄</span>刷新</button>
+  <button onclick="toggleDark()"><span class="icon" id="darkIcon">🌙</span>暗色</button>
+  <button onclick="window.scrollTo({top:0,behavior:'smooth'})"><span class="icon">↑</span>顶部</button>
+</div>
+
+<script>
+// ===== 暗色模式 =====
+function toggleDark() {
+  document.body.classList.toggle('dark-mode');
+  const isDark = document.body.classList.contains('dark-mode');
+  document.getElementById('darkBtn').textContent = isDark ? '☀️' : '🌙';
+  document.getElementById('darkIcon').textContent = isDark ? '☀️' : '🌙';
+  localStorage.setItem('darkMode', isDark ? '1' : '0');
+}
+if(localStorage.getItem('darkMode')==='1') toggleDark();
+
+// ===== 回到顶部显示/隐藏 =====
+const backTop = document.getElementById('backTop');
+window.addEventListener('scroll', function() {
+  if(window.scrollY > 300) backTop.classList.add('show');
+  else backTop.classList.remove('show');
+}, {passive:true});
+
+// ===== 刷新动画 =====
+document.getElementById('refreshBtn').addEventListener('click', function() {
+  const btn = this;
+  btn.innerHTML = '⏳';
+  setTimeout(function() { btn.innerHTML = '🔄'; location.reload(); }, 300);
+});
+</script>
 
 </body>
 </html>
