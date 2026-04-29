@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>📰 每日要闻 | 2026年4月29日</title>
+<style>  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root { --bg: #f5f5f5; --card-bg: #fff; --text: #333; --text2: #444; --nav-bg: #1a1a2e; --accent: #e74c3c; --border: #eee; --shadow: rgba(0,0,0,0.08); }
+  body.dark-mode { --bg: #1a1a2e; --card-bg: #16213e; --text: #e0e0e0; --text2: #b0b0b0; --nav-bg: #0f0f23; --border: #2a2a4a; --shadow: rgba(0,0,0,0.3); }
+  body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; font-size: 17px; padding: 56px 12px 20px; transition: background .3s, color .3s; -webkit-tap-highlight-color: transparent; }
+  .navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 999; background: var(--nav-bg); color: #fff; display: flex; align-items: center; justify-content: space-between; padding: 10px 14px; height: 50px; box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
+  .navbar-left, .navbar-right { display: flex; align-items: center; gap: 6px; }
+  .nav-btn { display: inline-flex; align-items: center; gap: 4px; background: rgba(255,255,255,0.15); border: none; color: #fff; padding: 6px 12px; border-radius: 18px; font-size: 13.5px; cursor: pointer; text-decoration: none; user-select: none; transition: background .2s; }
+  .nav-btn:hover, .nav-btn:active { background: rgba(255,255,255,0.28); }
+  .nav-btn:active { transform: scale(0.95); }
+  .nav-title { font-size: 15px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 160px; }
+  h1 { text-align: center; font-size: 21px; margin-bottom: 4px; }
+  .meta { text-align: center; color: #888; font-size: 12.5px; margin-bottom: 16px; }
+  .dark-mode .meta { color: #777; }
+  .section { background: var(--card-bg); border-radius: 10px; padding: 15px; margin-bottom: 12px; box-shadow: 0 1px 3px var(--shadow); transition: background .3s; }
+  .section-title { font-size: 17.5px; font-weight: bold; margin-bottom: 10px; color: var(--text); border-left: 4px solid var(--accent); padding-left: 9px; }
+  .section-title.blue { border-color: #3498db; }
+  .section-title.green { border-color: #27ae60; }
+  .section-title.purple { border-color: #9b59b6; }
+  .section-title.orange { border-color: #e67e22; }
+  .card { margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .card:last-child { border: none; margin: 0; padding: 0; }
+  .card-title { font-weight: bold; font-size: 16px; color: var(--text); margin-bottom: 5px; display: flex; align-items: flex-start; gap: 5px; }
+  .star { color: var(--accent); flex-shrink: 0; font-size: 14px; margin-top: 2px; }
+  .card-body { color: var(--text2); font-size: 15.5px; }
+  .source-links { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  .source-link { display: inline-flex; align-items: center; gap: 3px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: #fff !important; text-decoration: none; padding: 4px 11px; border-radius: 14px; font-size: 12px; transition: opacity .2s, transform .15s; white-space: nowrap; max-width: 180px; overflow: hidden; text-overflow: ellipsis; }
+  .source-link:hover { opacity: .85; }
+  .source-link:active { transform: scale(.95); opacity: 1; }
+  .dark-mode .source-link { background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%); }
+  table { width: 100%; border-collapse: collapse; margin: 8px 0; font-size: 14.5px; }
+  th { background: var(--bg); text-align: left; padding: 7px 9px; font-weight: 600; border-bottom: 2px solid var(--border); }
+  td { padding: 6px 9px; border-bottom: 1px solid var(--border); color: var(--text2); }
+  .price-highlight { color: var(--accent); font-weight: bold; font-size: 17px; }
+  .summary-box { background: #fffbe6; border: 1px solid #ffe58f; border-radius: 8px; padding: 13px; margin: 12px 0; }
+  .dark-mode .summary-box { background: #332d00; border-color: #554d00; }
+  .summary-box h3 { font-size: 16px; margin-bottom: 7px; color: #856404; }
+  .dark-mode .summary-box h3 { color: #f0d060; }
+  .summary-box ul { padding-left: 18px; color: #555; }
+  .dark-mode .summary-box ul { color: #bbb; }
+  .summary-box li { margin-bottom: 3px; font-size: 14.5px; }
+  .footer { text-align: center; color: #888; font-size: 11.5px; margin: 16px 0 8px; line-height: 1.6; }
+  b { color: var(--text); }
+  .back-top { position: fixed; right: 14px; bottom: 70px; z-index: 998; width: 38px; height: 38px; border-radius: 50%; background: var(--accent); color: #fff; display: none; align-items: center; justify-content: center; font-size: 18px; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.25); border: none; user-select: none; transition: transform .2s, opacity .2s; }
+  .back-top.show { display: flex; opacity: 0.85; }
+  .back-top:active { transform: scale(0.9); opacity: 1; }
+  .bottom-bar { position: fixed; bottom: 0; left: 0; right: 0; z-index: 997; background: var(--card-bg); border-top: 1px solid var(--border); display: flex; align-items: center; justify-content: space-around; padding: 8px 0; padding-bottom: max(8px, env(safe-area-inset-bottom)); box-shadow: 0 -1px 6px var(--shadow); }
+  .bottom-bar button { display: flex; flex-direction: column; align-items: center; gap: 2px; background: none; border: none; color: var(--text2); font-size: 11px; cursor: pointer; padding: 4px 12px; border-radius: 8px; transition: background .2s, color .2s; user-select: none; }
+  .bottom-bar button:active { background: var(--bg); }
+  .bottom-bar button .icon { font-size: 20px; }
+  .bottom-bar button.active { color: var(--accent); }</style>
+</head>
+<body>
+<div class="navbar">
+  <div class="navbar-left"><a href="index.html" class="nav-btn">⬅ 首页</a></div>
+  <div class="nav-title">📰 每日要闻</div>
+  <div class="navbar-right">
+    <button class="nav-btn" onclick="location.reload()" id="refreshBtn">🔄</button>
+    <button class="nav-btn" onclick="toggleDark()" id="darkBtn">🌙</button>
+  </div>
+</div>
+<h1>📰 每日要闻</h1>
+<p class="meta">2026年4月29日 | AI/科技 · 财经 · 学术 · 国内</p>
+<div class="section"><div class="section-title">🔥 一、AI & 科技前沿</div><div class="card"><div class="card-title">1. &quot;AI世纪诉讼&quot;开庭：马斯克出庭作证，揭秘与佩奇因AI安全决裂</div><div class="card-body"><b>⭐ 今日焦点</b><br>马斯克起诉OpenAI案于4月27日在北加州奥克兰联邦法院正式开庭，这场被称为"AI世纪诉讼"的较量直接决定OpenAI今年四季度IPO能否落地，或将重塑全球AI产业权力版图。马斯克在证词中自曝：他联合创立OpenAI的核心动机之一是与谷歌联合创始人拉里·佩奇因AI安全问题彻底闹翻——佩奇认为"只要AI存续，人类消亡也无所谓"，甚至指责马斯克是"物种歧视者"。马斯克投入3800万美元后因公司向营利性转型而与奥特曼决裂。<br>华尔街知名科技记者评论："在很多方面，马斯克已经赢了"——无论判决结果如何，他已成功将"AGI应造福全人类"的创始愿景重新置于公众辩论中心。</div><div class="source-links"><a href="https://finance.sina.com.cn/tech/digi/2026-04-29/doc-inhwczph6734905.shtml" target="_blank" rel="noopener" class="source-link">🔗 来源：新浪财经</a><a href="https://www.nbd.com.cn/articles/2026-04-27/4362585.html" target="_blank" rel="noopener" class="source-link">🔗 每日经济新闻</a><a href="https://www.sohu.com/a/1014437891_121361416" target="_blank" rel="noopener" class="source-link">🔗 搜狐科技</a></div></div><div class="card"><div class="card-title">2. OpenAI正式登陆AWS Bedrock：微软独占时代终结</div><div class="card-body"><b>⭐ 重大行业变革</b><br>OpenAI宣布将其最新AI模型及Codex编程工具集成至AWS Bedrock平台，Codex每周活跃用户已突破400万。这意味着微软与OpenAI的独家协议正式终止——亚马逊在终止次日即迅速上线OpenAI模型服务。萨姆·奥特曼与AWS CEO进行深度访谈，揭示多云分发战略意图。全球云计算格局从"独家绑定"进入"多极竞争"新阶段。<br>受OpenAI增长不及预期消息影响，英伟达收跌1.59%，科技股恐慌情绪蔓延。OpenAI回应称公司各项业务"火力全开"。</div><div class="source-links"><a href="https://aitoolly.com/zh/ai-news/2026-04-29" target="_blank" rel="noopener" class="source-link">🔗 来源：AIToolly</a><a href="https://m.163.com/dy/article/KRLP9IU405568W0A.html" target="_blank" rel="noopener" class="source-link">🔗 新浪财经</a></div></div><div class="card"><div class="card-title">3. 英伟达发布Nemotron 3 Nano Omni：统一视觉+音频+语言</div><div class="card-body">英伟达正式推出Nemotron 3 Nano Omni开源多模态模型，将视觉、语音和语言能力整合至单一系统，解决AI智能体在处理多种模态时需切换模型导致的效率低下和上下文丢失问题。AI智能体效率提升最高可达9倍，4月28日起在多平台上线。此外，谷歌与美国国防部达成协议，允许其AI系统用于机密军事工作。</div><div class="source-links"><a href="https://finance.sina.com.cn/headline/2026-04-29/doc-inhwenca6689603.shtml" target="_blank" rel="noopener" class="source-link">🔗 来源：新浪财经</a></div></div><div class="card"><div class="card-title">4. 开源生态大爆发：7个GitHub Trending项目亮相</div><div class="card-body">今日GitHub热门开源项目集中爆发，AI编程工具链成为核心主题：<br>- <b>Matt Pocock "skills"</b>：真实工程开发Agent技能，从".claude目录"提取<br>- <b>微软VibeVoice</b>：前沿语音AI项目正式开源<br>- <b>GitNexus</b>：浏览器端无服务器代码智能引擎，内置Graph RAG<br>- <b>Beads</b>：为编程智能体提供分布式图谱内存<br>- <b>free-claude-code</b>：通过自定义API免费调用Claude Code<br>开源生态的繁荣标志着AI编程从"氛围编码"向严谨工程实践加速演进。</div><div class="source-links"><a href="https://aitoolly.com/zh/ai-news/2026-04-29" target="_blank" rel="noopener" class="source-link">🔗 来源：AIToolly</a></div></div><div class="card"><div class="card-title">5. AI安全警示：&quot;毒化检索层&quot;可低成本欺骗大模型</div><div class="card-body">安全研究员通过一项实验揭示了大语言模型在联网搜索时的严重脆弱性。研究者虚构自己为"6 Nimmt!世界冠军"，通过建立虚假网站并修改维基百科条目，成功诱导多个前沿LLM引用虚假事实。仅需操纵搜索引擎和参考网页就能让最先进的AI模型产生错误认知，成本远低于传统模型投毒，引发对AI系统信任机制的深度讨论。</div><div class="source-links"><a href="https://aitoolly.com/zh/ai-news/2026-04-29" target="_blank" rel="noopener" class="source-link">🔗 来源：AIToolly</a></div></div></div>
+<div class="section"><div class="section-title blue">💰 二、财经 & 市场</div><div class="card"><div class="card-title">6. 国际油价逼近100美元！阿联酋宣布退出OPEC！</div><div class="card-body"><b>⭐ 今日最值得关注</b><br>国际油价因霍尔木兹海峡危机持续飙升：<br>- <b>WTI原油</b>收于 <b>99.93美元/桶</b>（+3.69%）<br>- <b>布伦特原油</b>收于 <b>111.26美元/桶</b>（+2.80%）<br>联合国确认：自2月28日以来，霍尔木兹海峡船舶通行量下降 <b>95.3%</b>，全球大宗食品价格上涨6%，欧洲原油价格上涨53%。<br><b>阿联酋发表声明：自5月1日起退出欧佩克及欧佩克+</b>，将逐步提高石油产量。全球油市格局面临重大变局。<br>美股方面：道指-0.05%，纳指-0.90%，标普-0.49%。OpenAI增长不及预期引发科技股恐慌。</div><div class="source-links"><a href="https://finance.sina.com.cn/headline/2026-04-29/doc-inhwckrn7883705.shtml" target="_blank" rel="noopener" class="source-link">🔗 来源：新浪财经</a><a href="https://finance.sina.com.cn/headline/2026-04-29/doc-inhwenca6689603.shtml" target="_blank" rel="noopener" class="source-link">🔗 新浪要闻TOP10</a><a href="https://news.qq.com/rain/a/20260429A02KKE00" target="_blank" rel="noopener" class="source-link">🔗 腾讯新闻</a></div></div><div class="card"><div class="card-title">7. 金价回落！国际金价跌破4600美元</div><div class="card-body"><b>⭐ 值得关注</b><br>传统避险逻辑在今日"失效"：尽管中东局势紧张，但油价飙升带来的通胀担忧反而强化了"美联储维持高利率"预期，美元走强压制了以美元计价的黄金价格。<br>- 国际金价在 <b>4600美元</b> 关口反复挣扎后跌破该位<br>- 国内基础金价报 <b>1014.23元/克</b>（较前一日跌6.95元）<br>- 纽约商品交易所黄金期货跌破4600美元<br>- 央行持续增持：中国央行连续17个月增持，储备达7438万盎司<br>- 短线资金撤离：某大型黄金ETF规模从高点回落超170亿元
+> 💡 "散户卖，央行买"——指向对黄金价值截然不同的长期判断。</div><div class="source-links"><a href="https://news.qq.com/rain/a/20260429A02KKE00" target="_blank" rel="noopener" class="source-link">🔗 来源：腾讯新闻</a></div></div><div class="card"><div class="card-title">8. 政治局会议定调经济：扩内需、稳楼市、实施&quot;人工智能+&quot;</div><div class="card-body">中共中央政治局4月28日召开会议，分析当前经济形势，定调积极："主要指标好于预期，彰显强大韧性和活力"。会议提出再提股市、楼市政策信号，深入整治"内卷式"竞争，抓好农业生产稳定生猪价格。专家解读八大核心信号。<br>此外，"模数共振"行动出台：工信部与国家数据局联合推动AI模型与数据资源协同互促，2026年底基本形成"数据—模型—场景应用"良性循环。</div><div class="source-links"><a href="https://finance.caixin.com/2026-04-29/102438987.html" target="_blank" rel="noopener" class="source-link">🔗 来源：财新</a><a href="https://finance.sina.com.cn/stock/y/2026-04-29/doc-inhwckrn7864833.shtml" target="_blank" rel="noopener" class="source-link">🔗 新浪财经</a></div></div><div class="card"><div class="card-title">9. 工业富联一季度净利暴增102.55%，营收2510亿</div><div class="card-body">工业富联公布一季报：营收 <b>2510.78亿元</b>，同比增长56.52%；归母净利润 <b>105.95亿元</b>，同比增长102.55%，连续三个季度净利破百亿元。受益AI算力需求爆发，为全年万亿元营收目标奠定基础。公募基金4月调研逼近5000次，环比增长超50%，一季报绩优公司成掘金重点。</div><div class="source-links"><a href="https://finance.sina.com.cn/stock/y/2026-04-29/doc-inhwckrn7864833.shtml" target="_blank" rel="noopener" class="source-link">🔗 来源：新浪财经</a></div></div></div>
+<div class="section"><div class="section-title green">🌍 三、国际 & 地缘政治</div><div class="card"><div class="card-title">10. 霍尔木兹海峡通行量暴跌95.3%，美伊对抗全面升级</div><div class="card-body"><b>⭐ 地缘焦点</b><br>- 伊朗陆军发言人表示军队处于 <b>战争状态</b><br>- 美国对 <b>35个伊朗相关实体及个人</b> 实施制裁<br>- 特朗普下令为对伊朗实施 <b>长期封锁</b> 做好预案，已有39艘船只被要求改道<br>- 特朗普凌晨发持枪配图威胁伊朗"放聪明点"<br>- 伊朗称仅对美以船只关闭海峡，可利用陆地边界绕过封锁<br>- 美德外交摩擦：特朗普炮轰德国总理默茨<br>- <b>五角大楼拟更名为"战争部"</b>，预计调整成本超5000万美元</div><div class="source-links"><a href="https://finance.sina.com.cn/headline/2026-04-29/doc-inhwenca6689603.shtml" target="_blank" rel="noopener" class="source-link">🔗 来源：新浪财经</a><a href="https://finance.sina.com.cn/headline/2026-04-29/doc-inhwckrn7883705.shtml" target="_blank" rel="noopener" class="source-link">🔗 新浪国际</a></div></div><div class="card"><div class="card-title">11. 其他国际动态</div><div class="card-body">- <b>乌克兰敖德萨州遭俄军大规模无人机夜袭</b>，11人受伤<br>- <b>朝俄同盟紧密</b>：金正恩会见俄国防部长别洛乌索夫<br>- <b>特朗普支持率跌至任内新低34%</b>，受生活成本及伊朗局势拖累<br>- <b>日本首相拟5月访问越南、澳大利亚等四国</b>，推销装备出口</div><div class="source-links"><a href="https://m.ah.huatu.com/2026/0429/3234504.html" target="_blank" rel="noopener" class="source-link">🔗 来源：华图教育</a><a href="https://finance.sina.com.cn/headline/2026-04-29/doc-inhwckrn7883705.shtml" target="_blank" rel="noopener" class="source-link">🔗 新浪财经</a></div></div></div>
+<div class="section"><div class="section-title purple">🇨🇳 四、国内要闻</div><div class="card"><div class="card-title">12. 教育部发布2026年本科专业目录：新增38种专业</div><div class="card-body">教育部4月28日发布《普通高等学校本科专业目录（2026年）》，共新增38种本科专业，今年起招生。新增专业包括<b>能源科学与工程、生物制造、脑机科学与技术、数字贸易、未来机器人、工程互联网</b>等，紧扣国家战略需求。全国高校专业调整比例首次突破10%。同济大学获批增设"未来机器人"和"工程互联网"，被首批列入"交叉学科"门类。</div><div class="source-links"><a href="https://news.cctv.cn/2026/04/29/ARTI50tygDgn22vchCkmnoH2260429.shtml" target="_blank" rel="noopener" class="source-link">🔗 来源：央视网</a><a href="https://www.thepaper.cn/newsDetail_forward_33078891" target="_blank" rel="noopener" class="source-link">🔗 澎湃新闻</a></div></div><div class="card"><div class="card-title">13. 服务扩能提质：&quot;十五五&quot;服务业还有20万亿增长空间</div><div class="card-body">国家发改委副主任沈竹林在吹风会上表示，"十五五"期间服务业还有 <b>20万亿元</b> 增长空间，目标到2030年迈上100万亿元台阶。同时，中电联预测2026年新能源装机有望超过 <b>3亿千瓦</b>。此外，中方宣布自5月1日起对20个非洲建交国实施零关税特惠税率。</div><div class="source-links"><a href="https://finance.sina.com.cn/stock/y/2026-04-29/doc-inhwckrn7864833.shtml" target="_blank" rel="noopener" class="source-link">🔗 来源：新浪财经</a></div></div><div class="card"><div class="card-title">14. 国安部披露：境外资助&quot;躺平网红&quot;搞洗脑宣传</div><div class="card-body">国家安全部发文指出，境外反华势力借助网络平台渲染"躺平""努力无用"等消极观念，试图消解青年奋斗信念。此外，特朗普政府已解散美国国家科学委员会，超过20名成员被一次性撤职。</div><div class="source-links"><a href="https://finance.caixin.com/2026-04-29/102438987.html" target="_blank" rel="noopener" class="source-link">🔗 来源：财新</a><a href="https://m.ah.huatu.com/2026/0429/3234504.html" target="_blank" rel="noopener" class="source-link">🔗 华图教育</a></div></div></div>
+<div class="section"><div class="section-title blue">📱 五、小米17 Pro 价格监控</div></div>
+<p class="footer">📡 数据来源：新浪财经 / AIToolly / 央视网 / 中新网 等<br>🤖 WorkBuddy 自动采集 | 2026-04-29</p>
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<div class="bottom-bar">
+  <button onclick="location.href='index.html'"><span class="icon">🏠</span>首页</button>
+  <button onclick="location.href='academic-daily-2026-04-29.html'"><span class="icon">📚</span>学术</button>
+  <button onclick="location.reload()"><span class="icon">🔄</span>刷新</button>
+  <button onclick="toggleDark()"><span class="icon" id="darkIcon">🌙</span>暗色</button>
+  <button onclick="window.scrollTo({top:0,behavior:'smooth'})"><span class="icon">↑</span>顶部</button>
+</div>
+<script>function toggleDark() {
+  document.body.classList.toggle('dark-mode');
+  const isDark = document.body.classList.contains('dark-mode');
+  document.getElementById('darkBtn').textContent = isDark ? '\u2600\ufe0f' : '\U0001f319';
+  document.getElementById('darkIcon').textContent = isDark ? '\u2600\ufe0f' : '\U0001f319';
+  localStorage.setItem('darkMode', isDark ? '1' : '0');
+}
+if(localStorage.getItem('darkMode')==='1') toggleDark();
+const backTop = document.getElementById('backTop');
+window.addEventListener('scroll', function() {
+  if(window.scrollY > 300) backTop.classList.add('show');
+  else backTop.classList.remove('show');
+}, {passive:true});
+document.getElementById('refreshBtn').addEventListener('click', function() {
+  const btn = this; btn.innerHTML = '\u23f3';
+  setTimeout(function() { btn.innerHTML = '\U0001f504'; location.reload(); }, 300);
+});</script>
+</body></html>
