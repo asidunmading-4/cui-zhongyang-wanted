@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>📰 每日要闻 | 2026年5月4日</title>
+<style>  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root { --bg: #f5f5f5; --card-bg: #fff; --text: #333; --text2: #444; --nav-bg: #1a1a2e; --accent: #e74c3c; --border: #eee; --shadow: rgba(0,0,0,0.08); }
+  body.dark-mode { --bg: #1a1a2e; --card-bg: #16213e; --text: #e0e0e0; --text2: #b0b0b0; --nav-bg: #0f0f23; --border: #2a2a4a; --shadow: rgba(0,0,0,0.3); }
+  body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; font-size: 17px; padding: 56px 12px 20px; transition: background .3s, color .3s; -webkit-tap-highlight-color: transparent; }
+  .navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 999; background: var(--nav-bg); color: #fff; display: flex; align-items: center; justify-content: space-between; padding: 10px 14px; height: 50px; box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
+  .navbar-left, .navbar-right { display: flex; align-items: center; gap: 6px; }
+  .nav-btn { display: inline-flex; align-items: center; gap: 4px; background: rgba(255,255,255,0.15); border: none; color: #fff; padding: 6px 12px; border-radius: 18px; font-size: 13.5px; cursor: pointer; text-decoration: none; user-select: none; transition: background .2s; }
+  .nav-btn:hover, .nav-btn:active { background: rgba(255,255,255,0.28); }
+  .nav-btn:active { transform: scale(0.95); }
+  .nav-title { font-size: 15px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 160px; }
+  h1 { text-align: center; font-size: 21px; margin-bottom: 4px; }
+  .meta { text-align: center; color: #888; font-size: 12.5px; margin-bottom: 16px; }
+  .dark-mode .meta { color: #777; }
+  .section { background: var(--card-bg); border-radius: 10px; padding: 15px; margin-bottom: 12px; box-shadow: 0 1px 3px var(--shadow); transition: background .3s; }
+  .section-title { font-size: 17.5px; font-weight: bold; margin-bottom: 10px; color: var(--text); border-left: 4px solid var(--accent); padding-left: 9px; }
+  .section-title.blue { border-color: #3498db; }
+  .section-title.green { border-color: #27ae60; }
+  .section-title.purple { border-color: #9b59b6; }
+  .section-title.orange { border-color: #e67e22; }
+  .card { margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .card:last-child { border: none; margin: 0; padding: 0; }
+  .card-title { font-weight: bold; font-size: 16px; color: var(--text); margin-bottom: 5px; display: flex; align-items: flex-start; gap: 5px; }
+  .star { color: var(--accent); flex-shrink: 0; font-size: 14px; margin-top: 2px; }
+  .card-body { color: var(--text2); font-size: 15.5px; }
+  .source-links { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  .source-link { display: inline-flex; align-items: center; gap: 3px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: #fff !important; text-decoration: none; padding: 4px 11px; border-radius: 14px; font-size: 12px; transition: opacity .2s, transform .15s; white-space: nowrap; max-width: 180px; overflow: hidden; text-overflow: ellipsis; }
+  .source-link:hover { opacity: .85; }
+  .source-link:active { transform: scale(.95); opacity: 1; }
+  .dark-mode .source-link { background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%); }
+  table { width: 100%; border-collapse: collapse; margin: 8px 0; font-size: 14.5px; }
+  th { background: var(--bg); text-align: left; padding: 7px 9px; font-weight: 600; border-bottom: 2px solid var(--border); }
+  td { padding: 6px 9px; border-bottom: 1px solid var(--border); color: var(--text2); }
+  .price-highlight { color: var(--accent); font-weight: bold; font-size: 17px; }
+  .summary-box { background: #fffbe6; border: 1px solid #ffe58f; border-radius: 8px; padding: 13px; margin: 12px 0; }
+  .dark-mode .summary-box { background: #332d00; border-color: #554d00; }
+  .summary-box h3 { font-size: 16px; margin-bottom: 7px; color: #856404; }
+  .dark-mode .summary-box h3 { color: #f0d060; }
+  .summary-box ul { padding-left: 18px; color: #555; }
+  .dark-mode .summary-box ul { color: #bbb; }
+  .summary-box li { margin-bottom: 3px; font-size: 14.5px; }
+  .footer { text-align: center; color: #888; font-size: 11.5px; margin: 16px 0 8px; line-height: 1.6; }
+  b { color: var(--text); }
+  .back-top { position: fixed; right: 14px; bottom: 70px; z-index: 998; width: 38px; height: 38px; border-radius: 50%; background: var(--accent); color: #fff; display: none; align-items: center; justify-content: center; font-size: 18px; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.25); border: none; user-select: none; transition: transform .2s, opacity .2s; }
+  .back-top.show { display: flex; opacity: 0.85; }
+  .back-top:active { transform: scale(0.9); opacity: 1; }
+  .bottom-bar { position: fixed; bottom: 0; left: 0; right: 0; z-index: 997; background: var(--card-bg); border-top: 1px solid var(--border); display: flex; align-items: center; justify-content: space-around; padding: 8px 0; padding-bottom: max(8px, env(safe-area-inset-bottom)); box-shadow: 0 -1px 6px var(--shadow); }
+  .bottom-bar button { display: flex; flex-direction: column; align-items: center; gap: 2px; background: none; border: none; color: var(--text2); font-size: 11px; cursor: pointer; padding: 4px 12px; border-radius: 8px; transition: background .2s, color .2s; user-select: none; }
+  .bottom-bar button:active { background: var(--bg); }
+  .bottom-bar button .icon { font-size: 20px; }
+  .bottom-bar button.active { color: var(--accent); }</style>
+</head>
+<body>
+<div class="navbar">
+  <div class="navbar-left"><a href="index.html" class="nav-btn">⬅ 首页</a></div>
+  <div class="nav-title">📰 每日要闻</div>
+  <div class="navbar-right">
+    <button class="nav-btn" onclick="location.reload()" id="refreshBtn">🔄</button>
+    <button class="nav-btn" onclick="toggleDark()" id="darkBtn">🌙</button>
+  </div>
+</div>
+<h1>📰 每日要闻</h1>
+<p class="meta">2026年5月4日 | AI/科技 · 财经 · 学术 · 国内</p>
+<div class="section"><div class="section-title">🔥 一、AI & 科技前沿</div><div class="card"><div class="card-title">1. 《Science》重磅：哈佛证实AI急诊分诊准确率超人类医生</div><div class="card-body"><b>⭐ 今日焦点</b><br>哈佛大学在《Science》发表论文，在仅凭电子病历文本（护士描述+生命体征+病史）进行急诊分诊的极简信息场景下，OpenAI的o1模型诊断准确率达 <b>67%</b>，人类医生仅50%-55%，AI高出约12-17个百分点。在制定长期治疗方案上，AI得分89%，远超依赖搜索引擎的医生（34%）。AI被形容为"永不疲倦的编译器"，能在海量医学文献中进行高频模式匹配。但研究强调AI没有"看到"患者的痛苦表情，也没有"闻到"伤口的气味，医疗的本质仍是对不确定性的管理。</div><div class="source-links"><a href="https://news.qq.com/rain/a/20260504A027J600" target="_blank" rel="noopener" class="source-link">🔗 来源：腾讯新闻</a><a href="https://m.163.com/dy/article/KRVMGR2T0511BLFD.html" target="_blank" rel="noopener" class="source-link">🔗 网易</a><a href="https://aitoolly.com/zh/ai-news/article/2026-05-04-harvard-study-finds-ai-large-language-models-surpass-human-doctors-in-emergency-room-diagnostic-accu" target="_blank" rel="noopener" class="source-link">🔗 AIToolly</a></div></div><div class="card"><div class="card-title">2. DeepClaude：用DeepSeek V4替换Claude Code，成本直降17倍</div><div class="card-body">开发者推出开源工具DeepClaude，可在保留Claude Code代理体验的同时将底层模型替换为DeepSeek V4 Pro。相比Claude Pro每月200美元订阅费，DeepSeek API成本仅每百万Token 0.87美元，降幅达17倍。支持文件编辑、Bash执行和多步编码循环，兼容OpenRouter等多种后端，在AI编程工具成本居高不下的背景下引发广泛关注。<br>此外，Claude Code生态持续扩展：Browserbase推出Skills SDK赋予Claude网页浏览能力；Ruflo发布企业级多智能体编排平台。</div><div class="source-links"><a href="https://aitoolly.com/zh/ai-news/2026-05-04" target="_blank" rel="noopener" class="source-link">🔗 来源：AIToolly</a></div></div><div class="card"><div class="card-title">3. 巴菲特&quot;后时代&quot;首场股东大会：阿贝尔首秀，AI版巴菲特惊现</div><div class="card-body"><b>⭐ 值得关注</b><br>当地时间5月2日，伯克希尔·哈撒韦股东大会在奥马哈举行——这是巴菲特退休后的首次股东大会，也是接班人格雷格·阿贝尔首次以CEO身份主持全场。95岁的巴菲特坐于台下前排，全场掌声长达数分钟。阿贝尔为巴菲特悬挂"60号退役球衣"致敬。<br>核心数据：<br>- 一季度净利润同比增长 <b>120%</b><br>- 现金储备达 <b>3973亿美元</b> 再创历史新高<br>- 阿贝尔对AI持保守态度，看好数据中心投资<br>- 巴菲特认为目前投资环境不佳，称市场为"附带赌场的教堂"<br>- 开场出现深度伪造巴菲特视频，警示AI风险</div><div class="source-links"><a href="https://www.nbd.com.cn/articles/2026-05-03/4378082.html" target="_blank" rel="noopener" class="source-link">🔗 来源：每日经济新闻</a><a href="https://www.21jingji.com/article/20260502/herald/3a77c081e1ebecd37a1a61c47dc2647f.html" target="_blank" rel="noopener" class="source-link">🔗 21经济</a><a href="https://finance.sina.com.cn/jjxw/2026-05-03/doc-inhwrhfc4669606.shtml" target="_blank" rel="noopener" class="source-link">🔗 新浪财经</a></div></div></div>
+<div class="section"><div class="section-title blue">💰 二、财经 & 市场</div><div class="card"><div class="card-title">4. 金价暴跌！国际金价跌破4600美元，机构仍看涨至5000+</div><div class="card-body"><b>⭐ 今日最值得关注</b><br>国际金价出现诡异分化：<br>- <b>国际金价暴跌至4606.17美元/盎司</b>，单日跌19.56美元<br>- COMEX黄金3-4月累计大跌 <b>11.77%</b>，创有记录以来最大双月净跌幅<br>- <b>国内金价逆势上涨</b>：黄金T+D报1013.4元/克（+0.21%）<br>暴跌原因：<br>1. 美联储以 <b>8:4</b> 维持利率不变，4票反对为1992年以来最大记录<br>2. 鲍威尔暗示最快6月调整措辞，为<b>加息预留空间</b><br>3. 候任主席凯文·沃什（鹰派）即将接替鲍威尔<br>4. 美元指数重返106，10年期美债收益率4.5%+<br><b>机构预测依然看涨</b>：高盛目标5400、瑞银5900、美银6000美元/盎司。<br>品牌金饰与投资金条价差巨大：周大福1419元/克 vs 工行金条1038元/克，品牌溢价超36%。</div><div class="source-links"><a href="https://news.qq.com/rain/a/20260504A033DF00" target="_blank" rel="noopener" class="source-link">🔗 来源：腾讯新闻</a></div></div><div class="card"><div class="card-title">5. 国内油价将迎第七涨！预计上调410元/吨</div><div class="card-body"><b>⭐ 影响出行</b><br>5月8日24时将迎来新一轮油价调整：<br>- 原油变化率已超5%，远超调价红线<br>- <b>预计每吨上调410元</b>（92号+0.33元/升，95号+0.35元/升）<br>- 完全抵消4月底"近三年最大降价"，且在此基础上进一步推高<br>- 当前92号汽油价格比年初高出约 <b>1.7元/升</b><br>背后原因：霍尔木兹海峡持续受阻（全球20%海运原油运输受影响）+ 阿联酋5月1日正式退出OPEC（近60年成员国身份终结）。布伦特原油一度突破 <b>126美元/桶</b>。</div><div class="source-links"><a href="https://news.qq.com/rain/a/20260504A0383T00" target="_blank" rel="noopener" class="source-link">🔗 来源：腾讯新闻</a></div></div><div class="card"><div class="card-title">6. A股一季报收官：整体营收净利润双增，航空业利润暴增453%</div><div class="card-body">A股一季报法定披露期结束，<b>整体营收、净利润同步增长</b>。重点行业表现亮眼：航空业扭亏为盈，净利润同比暴增 <b>453.9%</b>；TMT、石油石化、基础化工均有不同程度增长。47家百亿级私募持仓浮出水面，合计持股市值近800亿元，加码科技和消费。五粮液拟现金分红100.07亿元+80-100亿元回购方案。</div><div class="source-links"><a href="https://finance.sina.com.cn/headline/2026-05-04/doc-inhwspyr0850850.shtml" target="_blank" rel="noopener" class="source-link">🔗 来源：新浪财经</a></div></div></div>
+<div class="section"><div class="section-title green">🌍 三、国际 & 地缘政治</div><div class="card"><div class="card-title">7. 特朗普宣布&quot;自由行动&quot;引导霍尔木兹海峡船只，伊朗强硬回应</div><div class="card-body"><b>⭐ 地缘焦点</b><br>特朗普宣布中东时间5月4日上午启动代号"自由行动"的军事任务，引导被困国际商船安全驶离霍尔木兹海峡。同时发出严厉警告：遇阻挠将毫不犹豫武力应对。<br>伊朗议会国家安全委员会主席阿齐兹强硬回应：美国对霍尔木兹海峡"新管理制度"的任何干涉都将被视为 <b>违反停火协议</b>。该地区安全事务"绝不会受特朗普社交媒体推文的摆布"。<br>此外，5月1日白宫正式告知国会美伊敌对行动已"终结"，福特号航母已撤离。伊朗提出"14点提议、30天期限"的终战方案，但特朗普认为"难以接受"，还称存在重启对伊空袭的可能。美国汽油价格自战争爆发以来暴涨近 <b>50%</b>。</div><div class="source-links"><a href="https://world.people.com.cn/n1/2026/0504/c1002-40713502.html" target="_blank" rel="noopener" class="source-link">🔗 来源：人民网</a><a href="https://www.chinanews.com.cn/gj/2026/05-04/10615334.shtml" target="_blank" rel="noopener" class="source-link">🔗 中新网</a><a href="https://news.cctv.com/2026/05/02/ARTIpfiejbadj7YRuT5ycmPp260502.shtml" target="_blank" rel="noopener" class="source-link">🔗 央视网</a></div></div><div class="card"><div class="card-title">8. 美联储卡什卡里暗示可能加息，德国回应美国汽车关税上调</div><div class="card-body">- <b>美联储鹰派信号</b>：卡什卡里表示伊朗战争已对美国通胀产生重大影响，部分情景下可能不得不加息<br>- <b>美欧贸易摩擦升级</b>：德国经济部回应美国汽车关税上调，将与欧盟协调应对<br>- <b>日本干预汇率</b>：4月30日动用约5.4万亿日元干预汇率，但效果有限</div><div class="source-links"><a href="https://finance.sina.com.cn/headline/2026-05-04/doc-inhwsuhm3969348.shtml" target="_blank" rel="noopener" class="source-link">🔗 来源：新浪财经</a></div></div></div>
+<div class="section"><div class="section-title purple">🇨🇳 四、国内要闻</div><div class="card"><div class="card-title">9. 商务部发布阻断禁令，反击美国涉伊朗石油制裁</div><div class="card-body">5月2日，商务部发布阻断禁令，<b>阻断美国以参与涉伊朗石油交易为由对恒力石化等5家中国企业的制裁</b>。规定不得承认、执行、遵守美国的制裁措施。2025年以来，美国持续以此为由制裁中企，中方认为此举违反国际法。</div><div class="source-links"><a href="https://finance.sina.com.cn/headline/2026-05-04/doc-inhwspyr0850850.shtml" target="_blank" rel="noopener" class="source-link">🔗 来源：新浪财经</a></div></div><div class="card"><div class="card-title">10. 中国海军&quot;航母五件套&quot;齐亮相 + 张雪机车WSBK夺冠</div><div class="card-body">- <b>军事</b>：歼-15T、歼-35、空警-600等齐亮相，中国海军配齐"航母五件套"<br>- <b>产业</b>：5月2日，"张雪机车"夺得世界超级摩托车锦标赛匈牙利站冠军，引发资本市场共振，多家上市公司回应业务往来，中国摩托车高端化出海趋势明显<br>- <b>台湾问题</b>：赖清德窜访斯威士兰，国台办回应称"玩弄伎俩、贻笑天下"</div><div class="source-links"><a href="https://finance.sina.com.cn/headline/2026-05-04/doc-inhwspyr0850850.shtml" target="_blank" rel="noopener" class="source-link">🔗 来源：新浪财经</a></div></div></div>
+<div class="section"><div class="section-title blue">📱 五、小米17 Pro 价格监控</div></div>
+<p class="footer">📡 数据来源：新浪财经 / AIToolly / 央视网 / 中新网 等<br>🤖 WorkBuddy 自动采集 | 2026-05-04</p>
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<div class="bottom-bar">
+  <button onclick="location.href='index.html'"><span class="icon">🏠</span>首页</button>
+  <button onclick="location.href='academic-daily-2026-05-04.html'"><span class="icon">📚</span>学术</button>
+  <button onclick="location.reload()"><span class="icon">🔄</span>刷新</button>
+  <button onclick="toggleDark()"><span class="icon" id="darkIcon">🌙</span>暗色</button>
+  <button onclick="window.scrollTo({top:0,behavior:'smooth'})"><span class="icon">↑</span>顶部</button>
+</div>
+<script>function toggleDark() {
+  document.body.classList.toggle('dark-mode');
+  const isDark = document.body.classList.contains('dark-mode');
+  document.getElementById('darkBtn').textContent = isDark ? '\u2600\ufe0f' : '\U0001f319';
+  document.getElementById('darkIcon').textContent = isDark ? '\u2600\ufe0f' : '\U0001f319';
+  localStorage.setItem('darkMode', isDark ? '1' : '0');
+}
+if(localStorage.getItem('darkMode')==='1') toggleDark();
+const backTop = document.getElementById('backTop');
+window.addEventListener('scroll', function() {
+  if(window.scrollY > 300) backTop.classList.add('show');
+  else backTop.classList.remove('show');
+}, {passive:true});
+document.getElementById('refreshBtn').addEventListener('click', function() {
+  const btn = this; btn.innerHTML = '\u23f3';
+  setTimeout(function() { btn.innerHTML = '\U0001f504'; location.reload(); }, 300);
+});</script>
+</body></html>
