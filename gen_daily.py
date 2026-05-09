@@ -73,7 +73,7 @@ def md_to_cards(md_text, date_str, page_type):
             continue
 
         if stripped.startswith('## \U0001f4ca'):
-            if current_card:
+            if current_card and current_section:
                 current_section['cards'].append(current_card)
                 current_card = None
             if current_section:
@@ -92,7 +92,7 @@ def md_to_cards(md_text, date_str, page_type):
             else:
                 current_card['body'] = processed
 
-    if current_card:
+    if current_card and current_section:
         current_section['cards'].append(current_card)
     if current_section:
         sections.append(current_section)
@@ -262,7 +262,7 @@ def wrap(content, date_display, nav_icon, nav_label, nav_peer, peer_icon, peer_l
 <script>{JS}</script>
 </body></html>"""
 
-date_str = "2026-05-05"
+date_str = "2026-05-09"
 
 import os
 base = os.path.dirname(os.path.abspath(__file__))

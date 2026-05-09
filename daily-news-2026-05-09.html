@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>📰 每日要闻 | 2026年5月9日</title>
+<style>  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root { --bg: #f5f5f5; --card-bg: #fff; --text: #333; --text2: #444; --nav-bg: #1a1a2e; --accent: #e74c3c; --border: #eee; --shadow: rgba(0,0,0,0.08); }
+  body.dark-mode { --bg: #1a1a2e; --card-bg: #16213e; --text: #e0e0e0; --text2: #b0b0b0; --nav-bg: #0f0f23; --border: #2a2a4a; --shadow: rgba(0,0,0,0.3); }
+  body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; font-size: 17px; padding: 56px 12px 20px; transition: background .3s, color .3s; -webkit-tap-highlight-color: transparent; }
+  .navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 999; background: var(--nav-bg); color: #fff; display: flex; align-items: center; justify-content: space-between; padding: 10px 14px; height: 50px; box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
+  .navbar-left, .navbar-right { display: flex; align-items: center; gap: 6px; }
+  .nav-btn { display: inline-flex; align-items: center; gap: 4px; background: rgba(255,255,255,0.15); border: none; color: #fff; padding: 6px 12px; border-radius: 18px; font-size: 13.5px; cursor: pointer; text-decoration: none; user-select: none; transition: background .2s; }
+  .nav-btn:hover, .nav-btn:active { background: rgba(255,255,255,0.28); }
+  .nav-btn:active { transform: scale(0.95); }
+  .nav-title { font-size: 15px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 160px; }
+  h1 { text-align: center; font-size: 21px; margin-bottom: 4px; }
+  .meta { text-align: center; color: #888; font-size: 12.5px; margin-bottom: 16px; }
+  .dark-mode .meta { color: #777; }
+  .section { background: var(--card-bg); border-radius: 10px; padding: 15px; margin-bottom: 12px; box-shadow: 0 1px 3px var(--shadow); transition: background .3s; }
+  .section-title { font-size: 17.5px; font-weight: bold; margin-bottom: 10px; color: var(--text); border-left: 4px solid var(--accent); padding-left: 9px; }
+  .section-title.blue { border-color: #3498db; }
+  .section-title.green { border-color: #27ae60; }
+  .section-title.purple { border-color: #9b59b6; }
+  .section-title.orange { border-color: #e67e22; }
+  .card { margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .card:last-child { border: none; margin: 0; padding: 0; }
+  .card-title { font-weight: bold; font-size: 16px; color: var(--text); margin-bottom: 5px; display: flex; align-items: flex-start; gap: 5px; }
+  .star { color: var(--accent); flex-shrink: 0; font-size: 14px; margin-top: 2px; }
+  .card-body { color: var(--text2); font-size: 15.5px; }
+  .source-links { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  .source-link { display: inline-flex; align-items: center; gap: 3px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: #fff !important; text-decoration: none; padding: 4px 11px; border-radius: 14px; font-size: 12px; transition: opacity .2s, transform .15s; white-space: nowrap; max-width: 180px; overflow: hidden; text-overflow: ellipsis; }
+  .source-link:hover { opacity: .85; }
+  .source-link:active { transform: scale(.95); opacity: 1; }
+  .dark-mode .source-link { background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%); }
+  table { width: 100%; border-collapse: collapse; margin: 8px 0; font-size: 14.5px; }
+  th { background: var(--bg); text-align: left; padding: 7px 9px; font-weight: 600; border-bottom: 2px solid var(--border); }
+  td { padding: 6px 9px; border-bottom: 1px solid var(--border); color: var(--text2); }
+  .price-highlight { color: var(--accent); font-weight: bold; font-size: 17px; }
+  .summary-box { background: #fffbe6; border: 1px solid #ffe58f; border-radius: 8px; padding: 13px; margin: 12px 0; }
+  .dark-mode .summary-box { background: #332d00; border-color: #554d00; }
+  .summary-box h3 { font-size: 16px; margin-bottom: 7px; color: #856404; }
+  .dark-mode .summary-box h3 { color: #f0d060; }
+  .summary-box ul { padding-left: 18px; color: #555; }
+  .dark-mode .summary-box ul { color: #bbb; }
+  .summary-box li { margin-bottom: 3px; font-size: 14.5px; }
+  .footer { text-align: center; color: #888; font-size: 11.5px; margin: 16px 0 8px; line-height: 1.6; }
+  b { color: var(--text); }
+  .back-top { position: fixed; right: 14px; bottom: 70px; z-index: 998; width: 38px; height: 38px; border-radius: 50%; background: var(--accent); color: #fff; display: none; align-items: center; justify-content: center; font-size: 18px; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.25); border: none; user-select: none; transition: transform .2s, opacity .2s; }
+  .back-top.show { display: flex; opacity: 0.85; }
+  .back-top:active { transform: scale(0.9); opacity: 1; }
+  .bottom-bar { position: fixed; bottom: 0; left: 0; right: 0; z-index: 997; background: var(--card-bg); border-top: 1px solid var(--border); display: flex; align-items: center; justify-content: space-around; padding: 8px 0; padding-bottom: max(8px, env(safe-area-inset-bottom)); box-shadow: 0 -1px 6px var(--shadow); }
+  .bottom-bar button { display: flex; flex-direction: column; align-items: center; gap: 2px; background: none; border: none; color: var(--text2); font-size: 11px; cursor: pointer; padding: 4px 12px; border-radius: 8px; transition: background .2s, color .2s; user-select: none; }
+  .bottom-bar button:active { background: var(--bg); }
+  .bottom-bar button .icon { font-size: 20px; }
+  .bottom-bar button.active { color: var(--accent); }</style>
+</head>
+<body>
+<div class="navbar">
+  <div class="navbar-left"><a href="index.html" class="nav-btn">⬅ 首页</a></div>
+  <div class="nav-title">📰 每日要闻</div>
+  <div class="navbar-right">
+    <button class="nav-btn" onclick="location.reload()" id="refreshBtn">🔄</button>
+    <button class="nav-btn" onclick="toggleDark()" id="darkBtn">🌙</button>
+  </div>
+</div>
+<h1>📰 每日要闻</h1>
+<p class="meta">2026年5月9日 | AI/科技 · 财经 · 学术 · 国内</p>
+<div class="section"><div class="section-title">🔥 一、AI & 科技前沿</div><div class="card"><div class="card-title">1. 苹果与英特尔达成芯片代工协议，供应链大逆转</div><div class="card-body"><b>⭐ 今日焦点</b><br>据《华尔街日报》报道，苹果与英特尔已达成初步协议，英特尔将为苹果设备生产芯片。苹果自2020年推出自研Apple Silicon以来，一直由台积电独家代工先进制程芯片。此次引入英特尔代工，意味着苹果供应链多元化战略的重大转变。受此消息推动，英特尔股价盘中一度涨14%，收盘涨13.86%。台积电同日涨近5%。这一协议对英特尔代工业务意义重大——获得苹果这个顶级客户将极大提振其先进制程制造能力。</div><div class="source-links"><a href="https://finance.sina.com.cn/tech/roll/2026-05-09/doc-inhxhcxm7006061.shtml" target="_blank" rel="noopener" class="source-link">🔗 来源：新浪科技</a><a href="https://news.sina.com.cn/w/2026-05-09/doc-inhxfhtv7394988.shtml" target="_blank" rel="noopener" class="source-link">🔗 新浪新闻</a></div></div><div class="card"><div class="card-title">2. 费城半导体指数年内暴涨60%，美光单周飙升38%</div><div class="card-body"><b>⭐ 值得关注</b><br>全球半导体板块迎来史诗级行情。费城半导体指数首次站上11000点，年内累计涨幅达60%。AMD一季度财报引爆行情：营收103亿美元（同比+38%），数据中心业务同比+57%至58亿美元，股价两日暴涨近20%。美光科技更是一骑绝尘——过去12个月股价暴涨近7倍，5月9日单日飙升15.5%，市值突破8000亿美元。AI芯片需求持续强劲，英伟达、台积电均创历史新高。华尔街开始激辩：芯片股是否已到泡沫阶段？</div><div class="source-links"><a href="https://news.qq.com/rain/a/20260506A08G3300" target="_blank" rel="noopener" class="source-link">🔗 来源：腾讯新闻</a><a href="https://www.chinanews.com.cn/cj/2026/05-08/10617796.shtml" target="_blank" rel="noopener" class="source-link">🔗 中新网</a><a href="https://finance.sina.com.cn/stock/usstock/c/2026-05-09/doc-inhxftit3954938.shtml" target="_blank" rel="noopener" class="source-link">🔗 新浪财经</a></div></div><div class="card"><div class="card-title">3. 2026世界数字教育大会下周在杭州召开，AI+教育成核心主题</div><div class="card-body">经国务院批准，教育部和浙江省人民政府将于5月11日至13日在杭州举办2026世界数字教育大会，主题为"人工智能+教育：变革 发展 治理"。大会将发布八项重要成果，包括《中国智慧教育发展报告（2025-2026）》、《全球数字教育发展指数（2026）》、《人工智能教育伦理：参考框架》等。全球参评国家和地区从72个扩展至82个，首次将"超越AI的思维能力培养"纳入指数研究。</div><div class="source-links"><a href="https://www.xinhuanet.com/edu/20260507/339d9327fdeb4f2fa23ef85f34bd911d/c.html" target="_blank" rel="noopener" class="source-link">🔗 来源：新华网</a><a href="https://edu.people.com.cn/n1/2026/0507/c1006-40715177.html" target="_blank" rel="noopener" class="source-link">🔗 人民网</a></div></div></div>
+<div class="section"><div class="section-title blue">💰 二、财经 & 市场</div><div class="card"><div class="card-title">4. 标普500与纳指再创新高，连续六周上涨</div><div class="card-body"><b>⭐ 市场焦点</b><br>北京时间5月9日凌晨，美股周五收高，标普500涨0.84%，纳指涨1.68%，费城半导体指数大涨5.51%，均刷新历史新高。标普与纳指实现周线六连涨，创2024年10月以来最长连涨周期。道指微涨0.02%。科技股领涨：英特尔+13.86%、美光+15.5%、ARM涨超8%。美国4月非农就业人数增加11.5万，高于预期，但薪资增长温和，美债收益率不升反跌，提振了风险资产。</div><div class="source-links"><a href="https://finance.sina.com.cn/stock/usstock/c/2026-05-09/doc-inhxftit3948842.shtml" target="_blank" rel="noopener" class="source-link">🔗 来源：新浪财经</a><a href="https://finance.eastmoney.com/a/202605093732138447.html" target="_blank" rel="noopener" class="source-link">🔗 东方财富</a></div></div><div class="card"><div class="card-title">5. 金价回升至4720美元，油价回落至95-101美元区间</div><div class="card-body">- <b>金价</b>：伦敦现货金报4720.8美元/盎司，较5月5日低点4500美元显著回升，地缘避险情绪与美元走势共同支撑<br>- <b>国内金店</b>：周大福挂牌1437元/克，较前期微调<br>- <b>油价</b>：WTI原油收于95.42美元/桶（+0.64%），布伦特原油收于101.29美元/桶（+1.23%），较5月5日高点有所回落<br>- 花旗预测：布伦特Q2均价$110 → Q3 $95 → Q4 $80</div><div class="source-links"><a href="https://news.qq.com/rain/a/20260509A02IDO00" target="_blank" rel="noopener" class="source-link">🔗 来源：腾讯新闻</a><a href="https://finance.sina.com.cn/headline/2026-05-09/doc-inhxfxrp7091907.shtml" target="_blank" rel="noopener" class="source-link">🔗 新浪财经</a></div></div><div class="card"><div class="card-title">6. 美国贸易法院裁定特朗普10%全球关税无效</div><div class="card-body">美国贸易法院裁定特朗普政府10%全球关税无效，司法部已提出上诉。这一裁定对全球贸易格局可能产生深远影响。此外，美国政府据悉准备下达AI安全行政令，但不强制要求前沿模型接受审批，采取相对宽松的监管立场。</div><div class="source-links"><a href="https://finance.sina.com.cn/headline/2026-05-09/doc-inhxfxrp7091907.shtml" target="_blank" rel="noopener" class="source-link">🔗 来源：新浪财经</a></div></div></div>
+<div class="section"><div class="section-title green">🌍 三、国际 & 地缘政治</div><div class="card"><div class="card-title">7. 俄乌同意胜利日停火三天并交换千名战俘</div><div class="card-body"><b>⭐ 地缘焦点</b><br>特朗普在社交媒体宣布，俄罗斯和乌克兰同意自5月9日起实施为期三天的停火（至5月11日），与俄罗斯卫国战争胜利日重合。双方将各交换1000名战俘。泽连斯基下令莫斯科红场阅兵不会成为乌方攻击目标。俄总统助理乌沙科夫表示支持延长停火方案。特朗普称停火"可能持续超过3天"。这是近期俄乌冲突中最具实质性的缓和信号。</div><div class="source-links"><a href="https://world.people.com.cn/n1/2026/0509/c1002-40716155.html" target="_blank" rel="noopener" class="source-link">🔗 来源：人民网</a><a href="https://news.qq.com/rain/a/20260509A0349700" target="_blank" rel="noopener" class="source-link">🔗 腾讯新闻</a><a href="https://m.gmw.cn/2026-05/09/content_1304449619.htm" target="_blank" rel="noopener" class="source-link">🔗 光明网</a></div></div><div class="card"><div class="card-title">8. 美伊将在巴基斯坦重启谈判，拟定14项谅解备忘录</div><div class="card-body">特朗普预计将收到伊朗对协议方案的正式回复。若伊朗拒不签署，将重启"自由计划"军事行动。双方最早下周在巴基斯坦伊斯兰堡重启谈判，拟定14项要点谅解备忘录：<br>- <b>核心共识</b>：伊朗放松霍尔木兹海峡封锁 + 美方逐步解除对伊港口封锁<br>- <b>待解分歧</b>：伊朗反对向美国转移核材料、解除制裁范围待解决<br>- 5月8日，美军与伊朗在霍尔木兹海峡仍发生"零星冲突"</div><div class="source-links"><a href="https://finance.sina.com.cn/headline/2026-05-09/doc-inhxfxrp7091907.shtml" target="_blank" rel="noopener" class="source-link">🔗 来源：新浪财经</a></div></div></div>
+<div class="section"><div class="section-title purple">🇨🇳 四、国内要闻</div><div class="card"><div class="card-title">9. 国务院成立浏阳烟花厂爆炸事故调查组，习近平作出重要指示</div><div class="card-body">截至5月8日12时，浏阳"5·4"特别重大爆炸事故已造成37人死亡、1人失联、51人受伤。习近平作出重要指示强调"抓好重点行业领域风险隐患排查整治"。国务院决定成立事故调查组，按照"四不放过"原则全面调查。事故调查组组长、应急管理部部长张成中5月8日主持召开第一次全体会议。涉事企业此前2月已因安全生产问题被行政处罚。</div><div class="source-links"><a href="https://society.people.com.cn/n1/2026/0509/c1008-40716187.html" target="_blank" rel="noopener" class="source-link">🔗 来源：人民网</a><a href="https://www.xinhuanet.com/politics/20260508/9948bba93921432abe4aed38f47e58e6/c.html" target="_blank" rel="noopener" class="source-link">🔗 新华网</a><a href="https://news.sina.com.cn/s/2026-05-08/doc-inhxewcz7558206.shtml" target="_blank" rel="noopener" class="source-link">🔗 新浪新闻</a></div></div><div class="card"><div class="card-title">10. 王毅同法国总统外事顾问博纳会谈，中法关系继续深化</div><div class="card-body">5月8日，王毅在北京同法国总统外事顾问博纳举行会谈。王毅表示，中方愿同法方继续落实马克龙总统访华成果。中方重视法国议会通过简化文物归还程序的法律草案，愿加强文物返还合作。塔吉克斯坦总统拉赫蒙将对华进行国事访问。此前5月6日，王毅还同伊朗外长阿拉格齐会谈，伊方通报伊美谈判最新进展。</div><div class="source-links"><a href="https://www.mfa.gov.cn/web/wjdt_674879/gjldrhd_674881/202605/t20260508_11907301.shtml" target="_blank" rel="noopener" class="source-link">🔗 来源：外交部</a><a href="https://news.china.com.cn/2026-05/09/content_118484041.html" target="_blank" rel="noopener" class="source-link">🔗 中国网</a></div></div></div>
+<p class="footer">📡 数据来源：新浪财经 / AIToolly / 央视网 / 中新网 等<br>🤖 WorkBuddy 自动采集 | 2026-05-09</p>
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<div class="bottom-bar">
+  <button onclick="location.href='index.html'"><span class="icon">🏠</span>首页</button>
+  <button onclick="location.href='academic-daily-2026-05-09.html'"><span class="icon">📚</span>学术</button>
+  <button onclick="location.reload()"><span class="icon">🔄</span>刷新</button>
+  <button onclick="toggleDark()"><span class="icon" id="darkIcon">🌙</span>暗色</button>
+  <button onclick="window.scrollTo({top:0,behavior:'smooth'})"><span class="icon">↑</span>顶部</button>
+</div>
+<script>function toggleDark() {
+  document.body.classList.toggle('dark-mode');
+  const isDark = document.body.classList.contains('dark-mode');
+  document.getElementById('darkBtn').textContent = isDark ? '\u2600\ufe0f' : '\U0001f319';
+  document.getElementById('darkIcon').textContent = isDark ? '\u2600\ufe0f' : '\U0001f319';
+  localStorage.setItem('darkMode', isDark ? '1' : '0');
+}
+if(localStorage.getItem('darkMode')==='1') toggleDark();
+const backTop = document.getElementById('backTop');
+window.addEventListener('scroll', function() {
+  if(window.scrollY > 300) backTop.classList.add('show');
+  else backTop.classList.remove('show');
+}, {passive:true});
+document.getElementById('refreshBtn').addEventListener('click', function() {
+  const btn = this; btn.innerHTML = '\u23f3';
+  setTimeout(function() { btn.innerHTML = '\U0001f504'; location.reload(); }, 300);
+});</script>
+</body></html>
