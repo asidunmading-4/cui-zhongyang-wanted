@@ -3,123 +3,247 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>学术前沿 | 2026-05-16</title>
+<title>学术前沿日报 | 2026年5月16日</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"PingFang SC","Microsoft YaHei",sans-serif;background:#f0f2f5;color:#1a1a2e;line-height:1.7;font-size:17px}
-.container{max-width:800px;margin:0 auto;padding:16px}
-.header{text-align:center;padding:24px 16px;background:linear-gradient(135deg,#065f46,#059669);color:#fff;border-radius:12px;margin-bottom:20px}
-.header h1{font-size:22px;font-weight:700;margin-bottom:4px}
-.header .date{font-size:15px;opacity:.85}
-.table-wrap{overflow-x:auto;margin-bottom:16px}
-table{width:100%;border-collapse:collapse;background:#fff;border-radius:10px;overflow:hidden;font-size:14px;box-shadow:0 1px 4px rgba(0,0,0,.08)}
-th{background:#065f46;color:#fff;padding:10px 12px;text-align:left;font-weight:600}
-td{padding:10px 12px;border-bottom:1px solid #eee;color:#333}
-tr:last-child td{border-bottom:none}
-td a{color:#059669;text-decoration:none;word-break:break-all}
-td a:hover{text-decoration:underline}
-.section{background:#fff;border-radius:10px;padding:18px;margin-bottom:16px;box-shadow:0 1px 4px rgba(0,0,0,.08)}
-.paper{margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid #f0f0f0}
-.paper:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
-.paper .icon{font-size:24px;margin-bottom:6px}
-.paper h3{font-size:16px;font-weight:700;color:#1a1a2e;margin-bottom:4px;line-height:1.5}
-.paper .meta{font-size:13px;color:#888;margin-bottom:8px}
-.paper p{font-size:15px;color:#444;line-height:1.75}
-.paper a{color:#059669;text-decoration:none;font-size:13px}
-.paper a:hover{text-decoration:underline}
-.extend{background:#fff;border-radius:10px;padding:18px;margin-bottom:16px;box-shadow:0 1px 4px rgba(0,0,0,.08)}
-.extend h3{font-size:16px;font-weight:700;color:#1a1a2e;margin-bottom:10px}
-.extend ul{padding-left:20px}
-.extend li{font-size:15px;color:#444;margin-bottom:8px;line-height:1.65}
-.footer{text-align:center;padding:16px;color:#888;font-size:13px}
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: #f0f2f5;
+    color: #333;
+    line-height: 1.7;
+    font-size: 17px;
+  }
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 16px;
+  }
+  .header {
+    background: #2d7d46;
+    color: white;
+    padding: 24px 20px;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  .header h1 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .header .date {
+    font-size: 15px;
+    opacity: 0.9;
+  }
+  .card {
+    background: white;
+    border-radius: 12px;
+    padding: 18px;
+    margin-bottom: 14px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .card h2 {
+    font-size: 18px;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  .card h3 {
+    font-size: 17px;
+    color: #2d7d46;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+  .meta {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  .summary {
+    color: #444;
+    margin-bottom: 10px;
+  }
+  .link {
+    font-size: 14px;
+    word-break: break-all;
+  }
+  .link a {
+    color: #2d7d46;
+    text-decoration: none;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
+    margin-top: 8px;
+  }
+  th {
+    background: #e8f5e9;
+    color: #1b5e20;
+    padding: 10px 8px;
+    text-align: left;
+    font-weight: 600;
+  }
+  td {
+    padding: 10px 8px;
+    border-bottom: 1px solid #eee;
+    vertical-align: top;
+  }
+  tr:hover {
+    background: #f9f9f9;
+  }
+  .tag {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+    margin-right: 4px;
+  }
+  .tag-sleep { background: #e3f2fd; color: #1565c0; }
+  .tag-diet { background: #fff3e0; color: #e65100; }
+  .tag-sport { background: #e8f5e9; color: #2e7d32; }
+  .tag-mind { background: #f3e5f5; color: #6a1b9a; }
+  .tag-env { background: #e0f7fa; color: #00838f; }
+  .tag-ai { background: #fce4ec; color: #c62828; }
+  .tag-health { background: #fff8e1; color: #f57f17; }
+  .footer {
+    text-align: center;
+    font-size: 13px;
+    color: #999;
+    padding: 16px;
+  }
 </style>
 </head>
 <body>
 <div class="container">
+
 <div class="header">
-<h1>学术前沿日报</h1>
-<div class="date">2026年5月16日 周六</div>
+  <h1>学术前沿日报</h1>
+  <div class="date">2026年5月16日 周六</div>
 </div>
 
-<div class="table-wrap">
-<table>
-<tr><th>#</th><th>领域</th><th>标题</th><th>来源</th></tr>
-<tr><td>1</td><td>古生物学</td><td>恐龙化石发现6600万年前有机分子</td><td>ScienceDaily</td></tr>
-<tr><td>2</td><td>天文学</td><td>"悟空"号发现宇宙射线隐藏规律</td><td>DAMPE</td></tr>
-<tr><td>3</td><td>能源材料</td><td>液体电池"将阳光装进瓶中"</td><td>UC Santa Barbara</td></tr>
-<tr><td>4</td><td>衰老研究</td><td>适配体清除衰老细胞新突破</td><td>梅奥诊所</td></tr>
-<tr><td>5</td><td>健康运动</td><td>每周30分钟运动改善健康</td><td>ScienceDaily</td></tr>
-<tr><td>6</td><td>天文学</td><td>罗曼望远镜或发现数百万隐形中子星</td><td>ScienceDaily</td></tr>
-</table>
+<div class="card">
+  <h2>今日概览</h2>
+  <table>
+    <tr>
+      <th style="width:30px">#</th>
+      <th style="width:70px">领域</th>
+      <th>标题</th>
+      <th style="width:90px">来源</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td><span class="tag tag-health">衰老</span></td>
+      <td>适配体清除衰老细胞新突破</td>
+      <td>梅奥诊所</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td><span class="tag tag-diet">饮食</span></td>
+      <td>每日2-3杯咖啡降低35%痴呆风险</td>
+      <td>JAMA</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td><span class="tag tag-sleep">睡眠</span></td>
+      <td>不规律就寝或使心脏病风险翻倍</td>
+      <td>奥卢大学</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td><span class="tag tag-sport">运动</span></td>
+      <td>每周30分钟高强度运动改善健康</td>
+      <td>ScienceDaily</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td><span class="tag tag-env">环境</span></td>
+      <td>南大洋正因气候变化"出汗"更多</td>
+      <td>ScienceDaily</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td><span class="tag tag-mind">心理</span></td>
+      <td>无致幻副作用的新型抗抑郁药</td>
+      <td>UC Davis</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td><span class="tag tag-ai">AI</span></td>
+      <td>NASA太空AI芯片让航天器自主思考</td>
+      <td>NASA</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td><span class="tag tag-health">健康</span></td>
+      <td>每日复合维生素或延缓衰老</td>
+      <td>ScienceDaily</td>
+    </tr>
+  </table>
 </div>
 
-<div class="section">
-
-<div class="paper">
-<div class="icon">🦴</div>
-<h3>恐龙化石中首次发现66百万年前的有机分子痕迹</h3>
-<div class="meta">ScienceDaily | 5月14日</div>
-<p>科学家在6600万年前恐龙骨骼中检测到有机分子信号，推翻蛋白质在地质时间尺度上不可能保存的长期认知。为了解恐龙生物学和进化关系提供全新分子级窗口。</p>
-<a href="https://www.sciencedaily.com/releases/2026/05/260514.htm" target="_blank">ScienceDaily &raquo;</a>
+<div class="card">
+  <h3>🧬 适配体清除衰老细胞新突破</h3>
+  <div class="meta">梅奥诊所 / ScienceDaily | 2026年5月15日</div>
+  <div class="summary">梅奥诊所两名研究生之间的随意对话帮助催生了衰老研究的重大突破。研究人员发现，称为"适配体"的微小合成DNA分子可以选择性地靶向并清除衰老细胞——即那些停止分裂但仍释放有害炎症因子的"僵尸细胞"。这一方法比此前利用药物清除衰老细胞的策略更加精确和可控，为开发下一代抗衰老疗法开辟了全新路径。</div>
+  <div class="link"><a href="https://www.sciencedaily.com/releases/2026/05/260515.htm" target="_blank">阅读原文</a></div>
 </div>
 
-<div class="paper">
-<div class="icon">🌌</div>
-<h3>"悟空"号发现宇宙射线背后隐藏规律</h3>
-<div class="meta">DAMPE卫星 / ScienceDaily | 5月14日</div>
-<p>中国"悟空"号暗物质粒子探测卫星发现宇宙射线能谱中此前未知的周期性调制结构，为解释神秘超高能宇宙射线的来源打开新路径。对极端天体物理和暗物质搜索意义重大。</p>
-<a href="https://www.sciencedaily.com/releases/2026/05/260514.htm" target="_blank">ScienceDaily &raquo;</a>
+<div class="card">
+  <h3>☕ 每日2-3杯咖啡降低35%痴呆风险</h3>
+  <div class="meta">JAMA / ScienceDaily | 2026年5月13日</div>
+  <div class="summary">一项追踪超过13万名医护人员长达43年的大型研究发现，每日摄入约250-300毫克咖啡因（相当于2-3杯咖啡）可使75岁以下人群的痴呆风险降低35%。咖啡因通过阻断腺苷来维持多巴胺和乙酰胆碱等神经递质的活性，同时减少炎症并降低与阿尔茨海默病相关的淀粉样蛋白斑块积累。然而这种保护作用在适量摄入后趋于平稳，过量反而可能因干扰睡眠而损害大脑健康。</div>
+  <div class="link"><a href="https://www.sciencedaily.com/releases/2026/05/260512202350.htm" target="_blank">阅读原文</a></div>
 </div>
 
-<div class="paper">
-<div class="icon">☀️</div>
-<h3>科学家用液体电池"将阳光装进瓶中"</h3>
-<div class="meta">UC Santa Barbara / ScienceDaily | 5月14日</div>
-<p>创造"可充电太阳能电池"新材料，利用光化学反应将太阳能转化为化学能储存在液态介质中，突破传统太阳能电池即时使用限制，为离网供电和移动能源提供革命性方案。</p>
-<a href="https://www.sciencedaily.com/releases/2026/05/260514.htm" target="_blank">ScienceDaily &raquo;</a>
+<div class="card">
+  <h3>😴 不规律就寝或使心脏病风险翻倍</h3>
+  <div class="meta">芬兰奥卢大学 / ScienceDaily | 2026年5月5日</div>
+  <div class="summary">芬兰奥卢大学对3,231名出生于1966年的个体进行了长达十余年的追踪研究。研究发现，中年期睡眠时间不足八小时且就寝时间高度不规律的人群，发生心肌梗死或脑梗死等重大心血管事件的风险约为作息规律者的两倍。与就寝时间不同，不规律的起床时间并未显示出与心脏问题的明确关联。该研究首次单独分析了就寝时间、起床时间和睡眠中点变异性与心血管事件的独立关联，强调保持规律的就寝时间对心脏健康尤为重要。</div>
+  <div class="link"><a href="https://www.sciencedaily.com/releases/2026/05/260504154026.htm" target="_blank">阅读原文</a></div>
 </div>
 
-<div class="paper">
-<div class="icon">🧬</div>
-<h3>研究生的疯狂想法催生衰老研究重大突破</h3>
-<div class="meta">梅奥诊所 / ScienceDaily | 5月15日</div>
-<p>梅奥诊所发现微小合成DNA分子"适配体"可选择性靶向清除衰老细胞（僵尸细胞），比药物策略更精确可控，为下一代抗衰老疗法开辟新路径。</p>
-<a href="https://www.sciencedaily.com/releases/2026/05/260515.htm" target="_blank">ScienceDaily &raquo;</a>
+<div class="card">
+  <h3>🏃 每周30分钟高强度运动改善健康</h3>
+  <div class="meta">ScienceDaily | 2026年5月15日</div>
+  <div class="summary">你可能根本不需要在健身房花几个小时来促进健康。研究人员表示，每周仅需30分钟的高强度运动——分为数次短时运动——就足以显著改善心肺功能、降低慢性病风险和改善心理健康。这一发现打破了"运动越多越好"的常见认知，为忙碌的现代人提供了更高效的健身方案。研究建议将高强度间歇训练（HIIT）融入日常生活，如快走、爬楼梯等。</div>
+  <div class="link"><a href="https://www.sciencedaily.com/releases/2026/05/260515.htm" target="_blank">阅读原文</a></div>
 </div>
 
-<div class="paper">
-<div class="icon">🏃</div>
-<h3>每周仅30分钟高强度运动就能显著改善健康</h3>
-<div class="meta">ScienceDaily | 5月15日</div>
-<p>打破"运动越多越好"认知，每周仅30分钟高强度运动（分为数次短时运动）即可显著改善心肺功能、降低慢性病风险。建议融入HIIT训练到日常生活。</p>
-<a href="https://www.sciencedaily.com/releases/2026/05/260515.htm" target="_blank">ScienceDaily &raquo;</a>
+<div class="card">
+  <h3>🌍 南大洋正因气候变化"出汗"更多</h3>
+  <div class="meta">ScienceDaily | 2026年5月13日</div>
+  <div class="summary">位于澳大利亚与南极洲之间的麦夸里岛正经历显著气候转变。研究发现，该区域风暴带来的降雨量远超以往，表明南大洋在气候变暖加剧下蒸发与降水强度正大幅增加。南大洋是地球上最重要的碳汇之一，吸收了约40%的人类排放二氧化碳。该区域水循环的加剧可能影响全球海洋环流模式和气候系统稳定性，对理解气候变化的全局影响具有重要意义。</div>
+  <div class="link"><a href="https://www.sciencedaily.com/releases/2026/05/260513.htm" target="_blank">阅读原文</a></div>
 </div>
 
-<div class="paper">
-<div class="icon">🔭</div>
-<h3>NASA罗曼望远镜或揭示数百万颗隐形中子星</h3>
-<div class="meta">ScienceDaily | 5月15日</div>
-<p>通过检测引力透镜效应对背景星光造成的微妙偏移，罗曼望远镜有望发现银河系中数百万颗此前不可见的"孤独"中子星，对研究恒星演化至关重要。</p>
-<a href="https://www.sciencedaily.com/releases/2026/05/260515.htm" target="_blank">ScienceDaily &raquo;</a>
+<div class="card">
+  <h3>🧠 无致幻副作用的新型抗抑郁药</h3>
+  <div class="meta">加州大学戴维斯分校 / ScienceDaily | 2026年5月13日</div>
+  <div class="summary">加州大学戴维斯分校研究人员利用紫外线照射氨基酸与色胺的混合物，成功合成了一类全新的类致幻化合物。这些化合物能激活与大脑可塑性密切相关的5-HT2A血清素受体，其中最强效的化合物D5可作为完全激动剂，活性高达93%。令人意外的是，在动物实验中，D5并未产生预期的致幻行为。该发现为开发无致幻副作用的抑郁症、PTSD及成瘾障碍治疗药物开辟了全新方向。</div>
+  <div class="link"><a href="https://www.sciencedaily.com/releases/2026/05/260512202325.htm" target="_blank">阅读原文</a></div>
 </div>
 
+<div class="card">
+  <h3>🤖 NASA太空AI芯片让航天器自主思考</h3>
+  <div class="meta">NASA / ScienceDaily | 2026年5月15日</div>
+  <div class="summary">NASA正在测试新一代辐射加固太空计算机芯片，其性能较现有太空飞行芯片提升数百倍。该芯片专为深度学习推理设计，可在极端辐射环境下运行复杂AI模型，使航天器在深空探测中实现高度自主决策，大幅减少依赖地球地面站的通信延迟。这项技术对未来火星任务、外行星探测以及应对突发空间天气事件至关重要，标志着太空探索从"地面遥控"向"自主智能"的关键转变。</div>
+  <div class="link"><a href="https://www.sciencedaily.com/releases/2026/05/260515.htm" target="_blank">阅读原文</a></div>
 </div>
 
-<div class="extend">
-<h3>延伸阅读</h3>
-<ul>
-<li><strong>火星海洋新证据</strong>（ScienceDaily, 5月15日）— Shalbatana Vallis巨大峡谷揭示火星水与火山过去，可能证明火星曾拥有大面积海洋</li>
-<li><strong>血清素可能加剧耳鸣</strong>（ScienceDaily, 5月15日）— 大脑"快乐化学物质"血清素可能使耳鸣恶化</li>
-<li><strong>每日复合维生素或延缓衰老</strong>（ScienceDaily, 5月14日）— 老年人临床试验显示复合维生素组生物学衰老速度更慢</li>
-<li><strong>维生素B2的黑暗面</strong>（ScienceDaily, 5月15日）— B2可能帮助癌细胞存活，支持保护肿瘤免于铁死亡的细胞护盾</li>
-<li><strong>泰国发现巨型新恐龙</strong>（ScienceDaily, 5月15日）— *Nagatitan chaiyaphumensis*为东南亚有史以来最大</li>
-<li><strong>小行星在太阳附近解体</strong>（ScienceDaily, 5月14日）— 新流星群是太阳热量下小行星解体的确凿证据</li>
-</ul>
+<div class="card">
+  <h3>💊 每日复合维生素或延缓衰老</h3>
+  <div class="meta">ScienceDaily | 2026年5月14日</div>
+  <div class="summary">针对老年人的大型临床试验显示，连续两年每日服用复合维生素的参与者在多个基于DNA甲基化的"表观遗传时钟"指标上表现出更慢的生物学衰老速度。表观遗传时钟通过检测DNA上的化学标记来估算细胞和组织的生理年龄。虽然效果相对温和，但研究提示复合维生素中的多种微量营养素可能通过支持DNA修复、减少氧化应激和维持细胞代谢等机制，对延缓衰老过程具有累积性益处。</div>
+  <div class="link"><a href="https://www.sciencedaily.com/releases/2026/05/260514.htm" target="_blank">阅读原文</a></div>
 </div>
 
 <div class="footer">
-<p>日报生成时间：2026-05-16 11:30 CST | 数据来源：ScienceDaily、梅奥诊所、UC Santa Barbara等</p>
+  日报生成时间：2026年5月16日 17:00 CST<br>
+  数据来源：ScienceDaily、JAMA、梅奥诊所、UC Davis、NASA、芬兰奥卢大学等
 </div>
+
 </div>
 </body>
 </html>
